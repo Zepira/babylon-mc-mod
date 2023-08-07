@@ -23,8 +23,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> LAPIS_BRICK = registerBlock("lapis_brick",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL)));
 
-    public static final RegistryObject<Block> PALM_TREE = registerBlock("palm_tree",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PINK_TULIP)));
+    public static final RegistryObject<Block> PALM_CORE_BOTTOM = registerBlock("palm_core_bottom",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
+
+    public static final RegistryObject<Block> PALM_CORE_TOP = registerBlock("palm_core_top",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
+
+    public static final RegistryObject<Block> PALM_CORE_FROND = registerBlock("palm_core_frond",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

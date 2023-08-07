@@ -78,6 +78,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(Blocks.LECTERN);
                         pOutput.accept(Blocks.HOPPER);
 
+                        pOutput.accept(ModBlocks.PALM_CORE_BOTTOM.get());
+                        pOutput.accept(ModBlocks.PALM_CORE_TOP.get());
+                        pOutput.accept(ModBlocks.PALM_CORE_FROND.get());
+
                     })
                     .build());
 

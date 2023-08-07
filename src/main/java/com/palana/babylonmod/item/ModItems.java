@@ -18,6 +18,14 @@ public class ModItems {
     // ITEMS.register("palm_tree",
     // () -> new ForgeSpawnEggItem(ModEntities.PALM_TREE, 0xD57E36, 0x1D0D00,
     // new Item.Properties()));
+    public static final RegistryObject<Item> PALM_CORE = ITEMS.register("palm_base",
+            () -> new Item(new Item.Properties()));
+    // public static final RegistryObject<Item> PALM_CORE_TOP =
+    // ITEMS.register("palm_core_top",
+    // () -> new Item(new Item.Properties()));
+    // public static final RegistryObject<Item> PALM_FROND =
+    // ITEMS.register("palm_frond",
+    // () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -11,5 +11,9 @@
   "block.babylonmod.sapphire_block": "Ebony Sapling",
   "block.babylonmod.raw_sapphire_block": "Ebony Sapling",
 
-  "creativetab.babylon_tab": "Babylon Mod Tab"
+  "creativetab.babylon_tab": "Babylon Mod Tab",
+
+  "block.babylonmod.palm_core_bottom": "Palm Core Bottom",
+  "block.babylonmod.palm_core_top": "Palm Core Top",
+  "block.babylonmod.palm_core_frond": "Palm Frond"
 }
