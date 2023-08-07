@@ -1,7 +1,15 @@
 {
   "block.babylonmod.lapis_brick": "Lapis Lazuli Bricks",
 
-  "item.babylonmod.palm_tree": "Palm Tree",
+  "block.babylonmod.ebony_log": "Ebony Log",
+  "block.babylonmod.ebony_wood": "Ebony Wood",
+  "block.babylonmod.stripped_ebony_log": "Stripped Ebony Log",
+  "block.babylonmod.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.babylonmod.ebony_leaves": "Ebony Leaves",
+  "block.babylonmod.ebony_sapling": "Ebony Sapling",
+
+  "block.babylonmod.sapphire_block": "Ebony Sapling",
+  "block.babylonmod.raw_sapphire_block": "Ebony Sapling",
 
   "creativetab.babylon_tab": "Babylon Mod Tab"
 }
