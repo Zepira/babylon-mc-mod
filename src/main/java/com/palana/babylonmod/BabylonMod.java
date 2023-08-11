@@ -4,6 +4,9 @@ import com.mojang.logging.LogUtils;
 import com.palana.babylonmod.block.ModBlocks;
 import com.palana.babylonmod.item.ModCreativeModeTabs;
 import com.palana.babylonmod.item.ModItems;
+import com.palana.babylonmod.worldgen.tree.ModFoliagePlacerTypes;
+import com.palana.babylonmod.worldgen.tree.ModTrunkPlacerTypes;
+
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +38,10 @@ public class BabylonMod {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+        ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacerTypes.register(modEventBus);
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

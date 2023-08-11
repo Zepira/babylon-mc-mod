@@ -28,6 +28,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         // wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
 
         // simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
+        saplingItem(ModBlocks.WALNUT_SAPLING);
+        saplingItem(ModBlocks.PALM_SAPLING);
+
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                        new ResourceLocation(BabylonMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

@@ -25,12 +25,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // blockWithItem(ModBlocks.END_STONE_ALEXANDRITE_ORE);
         // blockWithItem(ModBlocks.NETHER_ALEXANDRITE_ORE);
 
-        // stairsBlock((StairBlock) ModBlocks.LAPIS_BRICK_STAIRS.get(), blockTexture(ModBlocks.LAPIS_BRICK.get()));
+        // stairsBlock((StairBlock) ModBlocks.LAPIS_BRICK_STAIRS.get(),
+        // blockTexture(ModBlocks.LAPIS_BRICK.get()));
         slabBlock((SlabBlock) ModBlocks.LAPIS_BRICK_SLAB.get(), blockTexture(ModBlocks.LAPIS_BRICK.get()),
                 blockTexture(ModBlocks.LAPIS_BRICK.get()));
 
-        //blockItem(ModBlocks.LAPIS_BRICK_STAIRS);
+        // blockItem(ModBlocks.LAPIS_BRICK_STAIRS);
         blockItem(ModBlocks.LAPIS_BRICK_SLAB);
+
+        blockItem(ModBlocks.WALNUT_LOG);
+        logBlock(((RotatedPillarBlock) ModBlocks.WALNUT_LOG.get()));
+        leavesBlock(ModBlocks.WALNUT_LEAVES);
+        saplingBlock(ModBlocks.WALNUT_SAPLING);
+
+        blockItem(ModBlocks.PALM_LOG);
+        logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
+        leavesBlock(ModBlocks.PALM_LEAVES);
+        saplingBlock(ModBlocks.PALM_SAPLING);
 
     }
 
@@ -41,5 +52,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                        blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                        blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 }
