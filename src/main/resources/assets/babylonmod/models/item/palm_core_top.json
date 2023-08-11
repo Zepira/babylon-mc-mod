@@ -1,3 +1,4 @@
 {
-  "parent": "babylonmod:block/palm_core_top"
+  "parent": "babylonmod:item/palm_core_top",
+  "item": "babylonmod:item/palm_top"
 }
