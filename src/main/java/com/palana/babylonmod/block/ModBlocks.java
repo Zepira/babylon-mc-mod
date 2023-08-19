@@ -1,6 +1,8 @@
 package com.palana.babylonmod.block;
 
 import com.palana.babylonmod.BabylonMod;
+import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
+import com.palana.babylonmod.block.custom.ModDirectionalBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.item.ModItems;
@@ -46,32 +48,71 @@ public class ModBlocks {
         public static final RegistryObject<Block> PALM_CORE_TOP = registerBlock("palm_core_top",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
 
+        public static final RegistryObject<Block> PALM_LEAVES = registerBlock("palm_leaves",
+                        () -> new DirectionalPalmLeaves(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+
         public static final RegistryObject<Block> PALM_CORE_FROND = registerBlock("palm_core_frond",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
 
         public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
-        public static final RegistryObject<Block> WALNUT_LEAVES = registerBlock("walnut_leaves",
-                        () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
-                                @Override
-                                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return true;
-                                }
+        public static final RegistryObject<Block> SANDSTONE_PEAK = registerBlock("sandstone_peak",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
-                                @Override
-                                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return 60;
-                                }
+        public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER = registerBlock("sandstone_peak_corner",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
-                                @Override
-                                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return 30;
-                                }
-                        });
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM = registerBlock(
+                        "sandstone_stepped_block_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK = registerBlock(
+                        "sandstone_extended_block",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BOTTOM_CORNER = registerBlock(
+                        "sandstone_stepped_bottom_corner",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK_CORNER = registerBlock(
+                        "sandstone_extended_block_corner",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_1 = registerBlock(
+                        "sandstone_diagonal_wall_1",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                                        .noOcclusion()));
+
+        // public static final RegistryObject<Block> WALNUT_LEAVES =
+        // registerBlock("walnut_leaves",
+        // () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+        // @Override
+        // public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
+        // Direction direction) {
+        // return true;
+        // }
+
+        // @Override
+        // public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
+        // Direction direction) {
+        // return 60;
+        // }
+
+        // @Override
+        // public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos
+        // pos,
+        // Direction direction) {
+        // return 30;
+        // }
+        // });
 
         public static final RegistryObject<Block> WALNUT_SAPLING = registerBlock("walnut_sapling",
                         () -> new SaplingBlock(new WalnutTreeGrower(),
@@ -80,26 +121,28 @@ public class ModBlocks {
         public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
-        public static final RegistryObject<Block> PALM_LEAVES = registerBlock("palm_leaves",
-                        () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
-                                @Override
-                                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return true;
-                                }
+        // public static final RegistryObject<Block> PALM_LEAVES =
+        // registerBlock("palm_leaves",
+        // () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+        // @Override
+        // public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
+        // Direction direction) {
+        // return true;
+        // }
 
-                                @Override
-                                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return 60;
-                                }
+        // @Override
+        // public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
+        // Direction direction) {
+        // return 60;
+        // }
 
-                                @Override
-                                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return 30;
-                                }
-                        });
+        // @Override
+        // public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos
+        // pos,
+        // Direction direction) {
+        // return 30;
+        // }
+        // });
 
         public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
                         () -> new ModSaplingBlock(new WalnutTreeGrower(),

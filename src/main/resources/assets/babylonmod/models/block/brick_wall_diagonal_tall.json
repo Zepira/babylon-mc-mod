@@ -1,0 +1,6 @@
+{
+  "parent": "babylonmod::block/template_wall_diagonal_tall",
+  "textures": {
+    "wall": "minecraft:block/bricks"
+  }
+}

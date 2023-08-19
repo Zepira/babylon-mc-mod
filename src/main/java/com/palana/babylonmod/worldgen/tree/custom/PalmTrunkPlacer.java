@@ -46,10 +46,11 @@ public class PalmTrunkPlacer extends TrunkPlacer {
 
             if (i % 2 == 0 && pRandom.nextBoolean()) {
                 // if (pRandom.nextFloat() > 0.25f) {
-                for (int x = 0; x < 4; x++) {
-                    placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i).relative(Direction.NORTH, x), pConfig);
+                // for (int x = 0; x < 4; x++) {
+                // placeLog(pLevel, pBlockSetter, pRandom,
+                // pPos.above(i).relative(Direction.NORTH, x), pConfig);
 
-                }
+                // }
                 // }
 
                 // if (pRandom.nextFloat() > 0.25f) {

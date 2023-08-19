@@ -1,13 +1,26 @@
 package com.palana.babylonmod.worldgen.tree.custom;
 
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
+
+import java.io.Console;
+import java.lang.System.Logger;
+
+import org.jline.utils.Log;
+
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
 import com.palana.babylonmod.worldgen.tree.ModFoliagePlacerTypes;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.LevelSimulatedReader;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
@@ -26,7 +39,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> type() {
-        return ModFoliagePlacerTypes.WALNUT_FOLIAGE_PLACER.get();
+        return ModFoliagePlacerTypes.PALM_FOLIAGE_PLACER.get();
     }
 
     @Override
@@ -37,10 +50,28 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         // attachment.pos() is the first position ABOVE the last places log
 
         // tryPlaceLeaf() // places one leave at given position!
-        for (int i = 0; i < 4; i++) {
-            this.placeLeavesRow(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().above(i), 2, i + 1,
-                    attachment.doubleTrunk());
-        }
+        // for (int i = 0; i < 4; i++) {
+        // this.placeLeavesRow(pLevel, foliageSetter, pRandom, pConfig,
+        // attachment.pos().above(0), 2, i + 1,
+        // attachment.doubleTrunk());
+        // }
+
+        System.out.println("HELLOE!");
+
+        BlockState blockstate = pConfig.foliageProvider.getState(pRandom,
+                attachment.pos());
+        DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+
+        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos());
+        blockstate = blockstate.setValue(FACING, Direction.EAST);
+        blockstate = DirectionalPalmLeaves.rotate(blockstate, Direction.EAST);
+        foliageSetter.set(attachment.pos(), blockstate);
+        System.out.println(blockstate.getValue(FACING));
+        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).north(1));
+        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).east(1));
+        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).south(1));
+        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).west(1));
+
     }
 
     @Override

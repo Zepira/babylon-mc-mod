@@ -1,0 +1,359 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "OR": [
+          {
+            "north": "none",
+            "west": "none",
+            "east": "none",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "low",
+            "west": "none",
+            "east": "none",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "west": "low",
+            "east": "none",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "west": "none",
+            "east": "low",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "west": "none",
+            "east": "none",
+            "south": "low",
+            "up": "true"
+          },
+          { "north": "low", "south": "low", "up": "true" },
+          { "east": "low", "west": "low", "up": "true" },
+          {
+            "north": "tall",
+            "west": "none",
+            "east": "none",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "west": "tall",
+            "east": "none",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "west": "none",
+            "east": "tall",
+            "south": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "west": "none",
+            "east": "none",
+            "south": "tall",
+            "up": "true"
+          },
+          { "north": "tall", "south": "tall", "up": "true" },
+          { "east": "tall", "west": "tall", "up": "true" },
+          { "north": "low", "south": "tall", "up": "true" },
+          { "north": "tall", "south": "low", "up": "true" },
+          { "east": "tall", "west": "low", "up": "true" },
+          { "east": "low", "west": "tall", "up": "true" },
+          {
+            "north": "tall",
+            "east": "low",
+            "south": "none",
+            "west": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "east": "tall",
+            "south": "low",
+            "west": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "east": "none",
+            "south": "tall",
+            "west": "low",
+            "up": "true"
+          },
+          {
+            "north": "low",
+            "east": "none",
+            "south": "none",
+            "west": "tall",
+            "up": "true"
+          },
+          {
+            "north": "low",
+            "east": "tall",
+            "south": "none",
+            "west": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "east": "low",
+            "south": "tall",
+            "west": "none",
+            "up": "true"
+          },
+          {
+            "north": "none",
+            "east": "none",
+            "south": "low",
+            "west": "tall",
+            "up": "true"
+          },
+          {
+            "north": "tall",
+            "east": "none",
+            "south": "none",
+            "west": "low",
+            "up": "true"
+          }
+        ]
+      },
+      "apply": { "model": "block/brick_wall_post" }
+    },
+
+    {
+      "when": {
+        "OR": [
+          { "north": "low", "south": "none", "east": "none", "west": "none" },
+          { "north": "low", "south": "low" },
+          { "north": "low", "south": "tall" },
+          { "north": "low", "east": "low", "west": "low" },
+          { "north": "low", "east": "tall", "west": "tall" },
+          { "north": "low", "east": "low", "west": "tall" },
+          { "north": "low", "east": "tall", "west": "low" }
+        ]
+      },
+      "apply": { "model": "minecraft:block/brick_wall_side", "uvlock": true }
+    },
+    {
+      "when": {
+        "OR": [
+          { "south": "low", "north": "none", "east": "none", "west": "none" },
+          { "south": "low", "north": "low" },
+          { "south": "low", "east": "low", "west": "low" },
+          { "south": "low", "north": "tall" },
+          { "south": "low", "east": "tall", "west": "tall" },
+          { "south": "low", "east": "low", "west": "tall" },
+          { "south": "low", "east": "tall", "west": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side",
+        "uvlock": true,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          { "east": "low", "west": "none", "north": "none", "south": "none" },
+          { "east": "low", "west": "low" },
+          { "east": "low", "north": "low", "south": "low" },
+          { "east": "low", "west": "tall" },
+          { "east": "low", "north": "tall", "south": "tall" },
+          { "east": "low", "north": "low", "south": "tall" },
+          { "east": "low", "north": "tall", "south": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side",
+        "uvlock": true,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          { "west": "low", "east": "none", "north": "none", "south": "none" },
+          { "west": "low", "east": "low" },
+          { "west": "low", "north": "low", "south": "low" },
+          { "west": "low", "east": "tall" },
+          { "west": "low", "north": "tall", "south": "tall" },
+          { "west": "low", "north": "low", "south": "tall" },
+          { "west": "low", "north": "tall", "south": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side",
+        "uvlock": true,
+        "y": 270
+      }
+    },
+
+    {
+      "when": {
+        "OR": [
+          { "north": "tall", "south": "none", "east": "none", "west": "none" },
+          { "north": "tall", "east": "tall", "west": "tall" },
+          { "north": "tall", "south": "tall" },
+          { "north": "tall", "south": "low" },
+          { "north": "tall", "east": "low" },
+          { "north": "tall", "west": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side_tall",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          { "south": "tall", "north": "none", "east": "none", "west": "none" },
+          { "south": "tall", "east": "tall", "west": "tall" },
+          { "south": "tall", "north": "tall" },
+          { "south": "tall", "north": "low" },
+          { "south": "tall", "east": "low" },
+          { "south": "tall", "west": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side_tall",
+        "uvlock": true,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          { "east": "tall", "north": "none", "south": "none", "west": "none" },
+          { "east": "tall", "north": "tall", "south": "tall" },
+          { "east": "tall", "west": "tall" },
+          { "east": "tall", "west": "low" },
+          { "east": "tall", "north": "low" },
+          { "east": "tall", "south": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side_tall",
+        "uvlock": true,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "OR": [
+          { "west": "tall", "north": "none", "south": "none", "east": "none" },
+          { "west": "tall", "north": "tall", "south": "tall" },
+          { "west": "tall", "east": "tall" },
+          { "west": "tall", "east": "low" },
+          { "west": "tall", "south": "low" },
+          { "west": "tall", "north": "low" }
+        ]
+      },
+      "apply": {
+        "model": "minecraft:block/brick_wall_side_tall",
+        "uvlock": true,
+        "y": 270
+      }
+    },
+
+    {
+      "when": {
+        "OR": [
+          { "north": "low", "east": "low", "south": "none", "west": "none" },
+          { "north": "tall", "east": "low", "south": "none", "west": "none" },
+          { "north": "low", "east": "tall", "south": "none", "west": "none" }
+        ]
+      },
+      "apply": { "model": "babylonmod:block/brick_wall_diagonal_low", "y": 180 }
+    },
+    {
+      "when": {
+        "OR": [
+          { "north": "low", "west": "low", "south": "none", "east": "none" },
+          { "north": "tall", "west": "low", "south": "none", "east": "none" },
+          { "north": "low", "west": "tall", "south": "none", "east": "none" }
+        ]
+      },
+      "apply": { "model": "babylonmod:block/brick_wall_diagonal_low", "y": 90 }
+    },
+    {
+      "when": {
+        "OR": [
+          { "south": "low", "east": "low", "north": "none", "west": "none" },
+          { "south": "tall", "east": "low", "north": "none", "west": "none" },
+          { "south": "low", "east": "tall", "north": "none", "west": "none" }
+        ]
+      },
+      "apply": { "model": "babylonmod:block/brick_wall_diagonal_low", "y": 270 }
+    },
+    {
+      "when": {
+        "OR": [
+          { "south": "low", "west": "low", "north": "none", "east": "none" },
+          { "south": "tall", "west": "low", "north": "none", "east": "none" },
+          { "south": "low", "west": "tall", "north": "none", "east": "none" }
+        ]
+      },
+      "apply": { "model": "babylonmod:block/brick_wall_diagonal_low" }
+    },
+
+    {
+      "when": {
+        "north": "tall",
+        "east": "tall",
+        "south": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "babylonmod:block/brick_wall_diagonal_tall",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "north": "tall",
+        "west": "tall",
+        "south": "none",
+        "east": "none"
+      },
+      "apply": { "model": "babylonmod:block/brick_wall_diagonal_tall", "y": 90 }
+    },
+    {
+      "when": {
+        "south": "tall",
+        "east": "tall",
+        "north": "none",
+        "west": "none"
+      },
+      "apply": {
+        "model": "babylonmod:block/brick_wall_diagonal_tall",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "south": "tall",
+        "west": "tall",
+        "north": "none",
+        "east": "none"
+      },
+      "apply": { "model": "babylonmod:block/brick_wall_diagonal_tall" }
+    }
+  ]
+}

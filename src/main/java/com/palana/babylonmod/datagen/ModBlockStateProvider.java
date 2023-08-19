@@ -1,9 +1,12 @@
 package com.palana.babylonmod.datagen;
 
+import java.util.function.Function;
+
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -35,13 +38,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockItem(ModBlocks.WALNUT_LOG);
         logBlock(((RotatedPillarBlock) ModBlocks.WALNUT_LOG.get()));
-        leavesBlock(ModBlocks.WALNUT_LEAVES);
+        // leavesBlock(ModBlocks.WALNUT_LEAVES);
         saplingBlock(ModBlocks.WALNUT_SAPLING);
 
         blockItem(ModBlocks.PALM_LOG);
         logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
-        leavesBlock(ModBlocks.PALM_LEAVES);
+        // leavesBlock(ModBlocks.PALM_LEAVES);
         saplingBlock(ModBlocks.PALM_SAPLING);
+
+        stairsBlock((StairBlock) ModBlocks.SANDSTONE_PEAK.get(),
+                blockTexture(ModBlocks.LAPIS_BRICK.get()));
 
     }
 

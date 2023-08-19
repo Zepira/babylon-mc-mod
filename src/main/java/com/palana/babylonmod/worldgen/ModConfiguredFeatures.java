@@ -1,7 +1,11 @@
 package com.palana.babylonmod.worldgen;
 
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import com.palana.babylonmod.BabylonMod;
@@ -31,16 +35,19 @@ public class ModConfiguredFeatures {
 
         register(context, WALNUT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.WALNUT_LOG.get()),
-                new PalmTrunkPlacer(5, 4, 3),
-                BlockStateProvider.simple(ModBlocks.WALNUT_LEAVES.get()),
+                new PalmTrunkPlacer(2, 1, 1),
+                BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                 new PalmFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
+        Block leavesBlock = ModBlocks.PALM_LEAVES.get();
+        // leavesBlock.getStateForPlacement(new
+        // BlockPlaceContext(HorizontalDirectionalBlock))
         register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
                 new PalmTrunkPlacer(5, 4, 3),
                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
-                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(2), 3),
+                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
