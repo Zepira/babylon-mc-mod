@@ -10,8 +10,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.ModBlocks;
-import com.palana.babylonmod.worldgen.tree.custom.PalmFoliagePlacer;
-import com.palana.babylonmod.worldgen.tree.custom.PalmTrunkPlacer;
+// import com.palana.babylonmod.worldgen.tree.custom.PalmFoliagePlacer;
+// import com.palana.babylonmod.worldgen.tree.custom.PalmTrunkPlacer;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -33,22 +33,24 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
-        register(context, WALNUT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.WALNUT_LOG.get()),
-                new PalmTrunkPlacer(2, 1, 1),
-                BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
-                new PalmFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+        // register(context, WALNUT_KEY, Feature.TREE, new
+        // TreeConfiguration.TreeConfigurationBuilder(
+        // BlockStateProvider.simple(ModBlocks.WALNUT_LOG.get()),
+        // new PalmTrunkPlacer(2, 1, 1),
+        // BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
+        // new PalmFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+        // new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        Block leavesBlock = ModBlocks.PALM_LEAVES.get();
+        // Block leavesBlock = ModBlocks.PALM_LEAVES.get();
         // leavesBlock.getStateForPlacement(new
         // BlockPlaceContext(HorizontalDirectionalBlock))
-        register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
-                new PalmTrunkPlacer(5, 4, 3),
-                BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
-                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+        // register(context, PALM_KEY, Feature.TREE, new
+        // TreeConfiguration.TreeConfigurationBuilder(
+        // BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
+        // new PalmTrunkPlacer(5, 4, 3),
+        // BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
+        // new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
+        // new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

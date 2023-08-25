@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "babylonmod:block/lapis_brick"
+    "all": "babylonmod:block/lapis_brick",
+    "particle": "babylonmod:block/lapis_brick"
   }
 }

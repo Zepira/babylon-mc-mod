@@ -23,15 +23,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_BRICK.get());
                         output.accept(ModBlocks.LAPIS_BRICK_STAIRS.get());
                         output.accept(ModBlocks.LAPIS_BRICK_SLAB.get());
-                        output.accept(ModBlocks.WALNUT_SAPLING.get());
-                        output.accept(ModBlocks.PALM_SAPLING.get());
+                        // output.accept(ModBlocks.WALNUT_SAPLING.get());
+                        // output.accept(ModBlocks.PALM_SAPLING.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK_CORNER.get());
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM.get());
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_CORNER.get());
-                        output.accept(ModBlocks.SANDSTONE_DIAGONAL_WALL_1.get());
+                        output.accept(ModBlocks.SANDSTONE_DIAGONAL_WALL.get());
+                        output.accept(ModBlocks.SANDSTONE_PEAK_DIAGONAL.get());
                         // output.accept(ModItems.ALEXANDRITE.get());
                         // output.accept(ModItems.RAW_ALEXANDRITE.get());
 

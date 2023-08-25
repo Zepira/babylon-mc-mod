@@ -3,6 +3,7 @@
   "textures": {
     "bottom": "babylonmod:block/alexandrite_block",
     "side": "babylonmod:block/alexandrite_block",
-    "top": "babylonmod:block/alexandrite_block"
+    "top": "babylonmod:block/alexandrite_block",
+    "particle": "babylonmod:block/lapis_brick"
   }
 }

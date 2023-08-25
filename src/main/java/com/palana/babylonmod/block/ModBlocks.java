@@ -6,7 +6,7 @@ import com.palana.babylonmod.block.custom.ModDirectionalBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.item.ModItems;
-import com.palana.babylonmod.worldgen.tree.WalnutTreeGrower;
+//import com.palana.babylonmod.worldgen.tree.WalnutTreeGrower;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -69,7 +69,7 @@ public class ModBlocks {
         public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM = registerBlock(
                         "sandstone_stepped_block_bottom",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
         public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK = registerBlock(
                         "sandstone_extended_block",
@@ -86,10 +86,14 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
-        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_1 = registerBlock(
-                        "sandstone_diagonal_wall_1",
+        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL = registerBlock(
+                        "sandstone_diagonal_wall",
                         () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                                         .noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_PEAK_DIAGONAL = registerBlock("sandstone_peak_diagonal",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         // public static final RegistryObject<Block> WALNUT_LEAVES =
         // registerBlock("walnut_leaves",
@@ -114,9 +118,10 @@ public class ModBlocks {
         // }
         // });
 
-        public static final RegistryObject<Block> WALNUT_SAPLING = registerBlock("walnut_sapling",
-                        () -> new SaplingBlock(new WalnutTreeGrower(),
-                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+        // public static final RegistryObject<Block> WALNUT_SAPLING =
+        // registerBlock("walnut_sapling",
+        // () -> new SaplingBlock(new WalnutTreeGrower(),
+        // BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
@@ -144,9 +149,10 @@ public class ModBlocks {
         // }
         // });
 
-        public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
-                        () -> new ModSaplingBlock(new WalnutTreeGrower(),
-                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+        // public static final RegistryObject<Block> PALM_SAPLING =
+        // registerBlock("palm_sapling",
+        // () -> new ModSaplingBlock(new WalnutTreeGrower(),
+        // BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
         // public static final RegistryObject<Block> ALEXANDRITE_BLOCK =
         // registerBlock("alexandrite_block",
         // () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
