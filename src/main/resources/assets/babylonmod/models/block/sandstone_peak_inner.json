@@ -1,9 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "bottom": "babylonmod:block/sandstone",
-    "top": "babylonmod:block/sandstone",
-    "side": "babylonmod:block/sandstone",
-    "particle": "babylonmod:block/sandstone"
-  }
-}

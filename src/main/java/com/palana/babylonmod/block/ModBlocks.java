@@ -58,9 +58,9 @@ public class ModBlocks {
         public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
+        // Straight tower shit
         public static final RegistryObject<Block> SANDSTONE_PEAK = registerBlock("sandstone_peak",
-                        () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER = registerBlock("sandstone_peak_corner",
                         () -> new ModDirectionalBlock(
@@ -86,6 +86,7 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+        // Diagonal tower shit
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL = registerBlock(
                         "sandstone_diagonal_wall",
                         () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
@@ -95,13 +96,37 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
-
         public static final RegistryObject<Block> GRASS_TWO = registerBlock("grass_two",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.PODZOL)));
 
-
         // public static final RegistryObject<Block> WALNUT_LEAVES =
         // registerBlock("walnut_leaves",
+
+        public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER_DIAGONAL = registerBlock(
+                        "sandstone_peak_corner_diagonal",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM_DIAGONAL = registerBlock(
+                        "sandstone_stepped_block_bottom_diagonal",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK_DIAGONAL = registerBlock(
+                        "sandstone_extended_block_diagonal",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BOTTOM_CORNER_DIAGONAL = registerBlock(
+                        "sandstone_stepped_bottom_corner_diagonal",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK_CORNER_DIAGONAL = registerBlock(
+                        "sandstone_extended_block_corner_diagonal",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
         // () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
         // @Override
         // public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
