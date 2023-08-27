@@ -95,6 +95,11 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+
+        public static final RegistryObject<Block> GRASS_TWO = registerBlock("grass_two",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.PODZOL)));
+
+
         // public static final RegistryObject<Block> WALNUT_LEAVES =
         // registerBlock("walnut_leaves",
         // () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
