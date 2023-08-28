@@ -24,17 +24,15 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        // register(context, WALNUT_PLACED_KEY,
-        // configuredFeatures.getOrThrow(ModConfiguredFeatures.WALNUT_KEY),
-        // VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-        // ModBlocks.WALNUT_SAPLING.get()));
+        register(context, WALNUT_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.WALNUT_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.WALNUT_SAPLING.get()));
 
-        // register(context, PALM_PLACED_KEY,
-        // configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
-        // VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), //
-        // possibly change here for
-        // // straight trunk!
-        // ModBlocks.PALM_SAPLING.get()));
+        register(context, PALM_PLACED_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.PALM_SAPLING.get()));
 
     }
 

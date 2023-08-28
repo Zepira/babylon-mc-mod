@@ -5,6 +5,7 @@ import java.util.function.Function;
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.ModBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -37,15 +38,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // // blockItem(ModBlocks.LAPIS_BRICK_STAIRS);
         // blockItem(ModBlocks.LAPIS_BRICK_SLAB);
 
-        // blockItem(ModBlocks.WALNUT_LOG);
-        // logBlock(((RotatedPillarBlock) ModBlocks.WALNUT_LOG.get()));
-        // // leavesBlock(ModBlocks.WALNUT_LEAVES);
-        // saplingBlock(ModBlocks.WALNUT_SAPLING);
+        logBlock(((RotatedPillarBlock) ModBlocks.WALNUT_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
+        // axisBlock(((RotatedPillarBlock) ModBlocks.WALNUT_WOOD.get()),
+        // blockTexture(ModBlocks.WALNUT_LOG.get()),
+        // blockTexture(ModBlocks.WALNUT_LOG.get()));
+        // axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WALNUT_LOG.get(),
+        // new ResourceLocation(BabylonMod.MOD_ID, "block/stripped_walnut_log"),
+        // new ResourceLocation(BabylonMod.MOD_ID, "block/stripped_walnut_log_top"));
+        // axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WALNUT_WOOD.get(),
+        // new ResourceLocation(BabylonMod.MOD_ID, "block/stripped_walnut_log"),
+        // new ResourceLocation(BabylonMod.MOD_ID, "block/stripped_walnut_log"));
+
+        blockItem(ModBlocks.WALNUT_LOG);
+        blockItem(ModBlocks.PALM_LOG);
+        // blockItem(ModBlocks.WALNUT_WOOD);
+        // blockItem(ModBlocks.STRIPPED_WALNUT_LOG);
+        // blockItem(ModBlocks.STRIPPED_WALNUT_WOOD);
+
+        // blockWithItem(ModBlocks.WALNUT_PLANKS);
+
+        leavesBlock(ModBlocks.WALNUT_LEAVES);
+        saplingBlock(ModBlocks.WALNUT_SAPLING);
+        // leavesBlock(ModBlocks.PALM_LEAVES);
+        saplingBlock(ModBlocks.PALM_SAPLING);
 
         // blockItem(ModBlocks.PALM_LOG);
         // logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
-        // // leavesBlock(ModBlocks.PALM_LEAVES);
-        // saplingBlock(ModBlocks.PALM_SAPLING);
 
         // stairsBlock((StairBlock) ModBlocks.SANDSTONE_PEAK.get(),
         // blockTexture(ModBlocks.LAPIS_BRICK.get()));

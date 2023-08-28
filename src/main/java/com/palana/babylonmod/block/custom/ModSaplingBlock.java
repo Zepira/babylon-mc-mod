@@ -12,8 +12,9 @@ public class ModSaplingBlock extends SaplingBlock {
         super(pTreeGrower, pProperties);
     }
 
-    @Override
-    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-        return pState.is(Blocks.END_STONE);
-    }
+    // @Override
+    // protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos
+    // pPos) {
+    // return pState.is(Blocks.END_STONE);
+    // }
 }

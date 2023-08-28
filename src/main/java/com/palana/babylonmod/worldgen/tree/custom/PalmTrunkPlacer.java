@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.function.BiConsumer;
 
 public class PalmTrunkPlacer extends TrunkPlacer {
-    public static final Codec<PalmTrunkPlacer> CODEC = RecordCodecBuilder
+    public static final Codec<PalmTrunkPlacer> TRUNK_CODEC = RecordCodecBuilder
             .create(palmTrunkPlacerInstance -> trunkPlacerParts(palmTrunkPlacerInstance)
                     .apply(palmTrunkPlacerInstance, PalmTrunkPlacer::new));
 
@@ -38,10 +38,11 @@ public class PalmTrunkPlacer extends TrunkPlacer {
             RandomSource pRandom, int pFreeTreeHeight, BlockPos pPos, TreeConfiguration pConfig) {
         // THIS IS WHERE THE BLOCK PLACING LOGIC IS!
         setDirtAt(pLevel, pBlockSetter, pRandom, pPos.below(), pConfig);
-        int height = pFreeTreeHeight + pRandom.nextInt(heightRandA, heightRandA + 3)
+        int height = pFreeTreeHeight + pRandom.nextInt(heightRandA, heightRandA + 1)
                 + pRandom.nextInt(heightRandB - 1, heightRandB + 1);
-
-        for (int i = 0; i < height; i++) {
+        System.out.println("HEIGHT!");
+        System.out.println(height);
+        for (int i = 0; i < pFreeTreeHeight; i++) {
             placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
 
             if (i % 2 == 0 && pRandom.nextBoolean()) {
@@ -76,9 +77,10 @@ public class PalmTrunkPlacer extends TrunkPlacer {
             }
         }
 
-        return ImmutableList.of(new FoliagePlacer.FoliageAttachment(pPos.above(height), 0, false));// add different
-                                                                                                   // foliage options,
-                                                                                                   // eg for top, sides
-                                                                                                   // etc
+        return ImmutableList.of(new FoliagePlacer.FoliageAttachment(pPos.above(pFreeTreeHeight), 0, false));// add
+                                                                                                            // different
+        // foliage options,
+        // eg for top, sides
+        // etc
     }
 }
