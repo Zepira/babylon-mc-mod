@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
@@ -62,15 +63,50 @@ public class PalmFoliagePlacer extends FoliagePlacer {
                 attachment.pos());
         DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos());
-        blockstate = blockstate.setValue(FACING, Direction.EAST);
-        blockstate = DirectionalPalmLeaves.rotate(blockstate, Direction.EAST);
+        // tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos());
+        // blockstate = blockstate.setValue(FACING, Direction.WEST);
+        // blockstate = DirectionalPalmLeaves.rotate(blockstate, Direction.WEST);
+
+        // top block (no facing)
         foliageSetter.set(attachment.pos(), blockstate);
-        System.out.println(blockstate.getValue(FACING));
-        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).north(1));
-        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).east(1));
-        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).south(1));
-        tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos().below(1).west(1));
+
+        blockstate = blockstate.setValue(FACING, Direction.EAST);
+        foliageSetter.set(attachment.pos().below(1).east(1), blockstate);
+
+        blockstate = blockstate.setValue(FACING, Direction.WEST);
+        foliageSetter.set(attachment.pos().below(1).west(1), blockstate);
+
+        blockstate = blockstate.setValue(FACING, Direction.NORTH);
+        foliageSetter.set(attachment.pos().below(1).north(1), blockstate);
+
+        blockstate = blockstate.setValue(FACING, Direction.SOUTH);
+        foliageSetter.set(attachment.pos().below(1).south(1), blockstate);
+        // System.out.println(blockstate.getValue(FACING));
+        // tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig,
+        // attachment.pos().below(1).north(1));
+        // tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig,
+        // attachment.pos().below(1).east(1));
+        // tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig,
+        // attachment.pos().below(1).south(1));
+        // customTryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig,
+        // attachment.pos().below(1).west(1));
+
+        // foliageSetter.set(attachment.pos().below(1).west(1),
+        // pConfig.foliageProvider.getState(pRandom,
+        // attachment.pos().below(1).west(1)));
+
+    }
+
+    protected static boolean customTryPlaceLeaf(LevelSimulatedReader p_273596_, FoliagePlacer.FoliageSetter p_273054_,
+            RandomSource p_272977_, TreeConfiguration p_273040_, BlockPos p_273406_) {
+        if (!TreeFeature.validTreePos(p_273596_, p_273406_)) {
+            return false;
+        } else {
+            BlockState blockstate = p_273040_.foliageProvider.getState(p_272977_, p_273406_);
+            blockstate = blockstate.setValue(BlockStateProperties.FACING, Direction.WEST);
+            p_273054_.set(p_273406_, blockstate);
+            return true;
+        }
 
     }
 
