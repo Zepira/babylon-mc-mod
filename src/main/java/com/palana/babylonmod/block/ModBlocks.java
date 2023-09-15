@@ -180,6 +180,26 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+        public static final RegistryObject<Block> SANDSTONE_ROUND_WINDOW = registerBlock(
+                        "sandstone_round_window",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_ROUND_WINDOW_EXTENDED = registerBlock(
+                        "sandstone_round_window_extended",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_ROUND_WINDOW = registerBlock(
+                        "lapis_round_window",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_ROUND_WINDOW_EXTENDED = registerBlock(
+                        "lapis_round_window_extended",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
         public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
