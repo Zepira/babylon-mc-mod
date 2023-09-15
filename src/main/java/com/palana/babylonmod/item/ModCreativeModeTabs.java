@@ -58,6 +58,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_ROUND_WINDOW_EXTENDED.get());
                         output.accept(ModBlocks.LAPIS_ROUND_WINDOW.get());
                         output.accept(ModBlocks.LAPIS_ROUND_WINDOW_EXTENDED.get());
+                        output.accept(ModBlocks.SANDSTONE_WINDOW_RECTANGLE.get());
+                        output.accept(ModBlocks.SANDSTONE_WINDOW_RECTANGLE_STEPPED.get());
 
                         // output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         // output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
