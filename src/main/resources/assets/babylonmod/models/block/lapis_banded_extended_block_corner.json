@@ -1,0 +1,31 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "0": "babylonmod:block/lapis_band",
+    "1": "babylonmod:block/lapis_main",
+    "particle": "babylonmod:block/lapis_band"
+  },
+  "elements": [
+    {
+      "from": [-4, 0, -4],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0" },
+        "east": { "uv": [0, 0, 16, 16], "texture": "#0" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#0" },
+        "west": { "uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0" },
+        "up": { "uv": [0, 0, 16, 16], "texture": "#1" },
+        "down": { "uv": [0, 0, 16, 16], "rotation": 180, "texture": "#1" }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "group",
+      "origin": [0, 0, 0],
+      "color": 0,
+      "children": [0]
+    }
+  ]
+}
