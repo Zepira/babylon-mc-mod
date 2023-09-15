@@ -14,7 +14,7 @@ public class ModTrunkPlacerTypes {
             .create(Registries.TRUNK_PLACER_TYPE, BabylonMod.MOD_ID);
 
     public static final RegistryObject<TrunkPlacerType<PalmTrunkPlacer>> PALM_TRUNK_PLACER = TRUNK_PLACERS
-            .register("palm_trunk_placer", () -> new TrunkPlacerType<>(PalmTrunkPlacer.CODEC));
+            .register("palm_trunk_placer", () -> new TrunkPlacerType<>(PalmTrunkPlacer.TRUNK_CODEC));
 
     public static void register(IEventBus eventBus) {
         TRUNK_PLACERS.register(eventBus);

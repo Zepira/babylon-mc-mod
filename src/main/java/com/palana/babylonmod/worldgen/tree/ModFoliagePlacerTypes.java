@@ -14,7 +14,7 @@ public class ModFoliagePlacerTypes {
             .create(Registries.FOLIAGE_PLACER_TYPE, BabylonMod.MOD_ID);
 
     public static final RegistryObject<FoliagePlacerType<PalmFoliagePlacer>> PALM_FOLIAGE_PLACER = FOLIAGE_PLACERS
-            .register("palm_foliage_placer", () -> new FoliagePlacerType<>(PalmFoliagePlacer.CODEC));
+            .register("palm_foliage_placer", () -> new FoliagePlacerType<>(PalmFoliagePlacer.FOLIAGE_CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
