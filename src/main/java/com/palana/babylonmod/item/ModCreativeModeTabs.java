@@ -20,39 +20,34 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.babylon_tab"))
                     .displayItems((displayParameters, output) -> {
 
-                        output.accept(ModBlocks.LAPIS_BRICK.get());
-                        output.accept(ModBlocks.LAPIS_BRICK_STAIRS.get());
-                        output.accept(ModBlocks.LAPIS_BRICK_SLAB.get());
-                        output.accept(ModBlocks.WALNUT_SAPLING.get());
-                        output.accept(ModBlocks.PALM_SAPLING.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK.get());
                         output.accept(ModBlocks.LAPIS_PEAK.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK_CORNER.get());
                         output.accept(ModBlocks.LAPIS_PEAK_CORNER.get());
+
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER.get());
+                        output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK.get());
+                        output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_CORNER.get());
+
                         output.accept(ModBlocks.CHISELED_SANDSTONE_STEPPED_BLOCK_BOTTOM.get());
+                        output.accept(ModBlocks.CHISELED_SANDSTONE_STEPPED_BOTTOM_CORNER.get());
+
                         output.accept(ModBlocks.LAPIS_STEPPED_BLOCK_BOTTOM.get());
+                        output.accept(ModBlocks.LAPIS_STEPPED_BOTTOM_CORNER.get());
+                        output.accept(ModBlocks.LAPIS_EXTENDED_BLOCK.get());
+                        output.accept(ModBlocks.LAPIS_EXTENDED_BLOCK_CORNER.get());
+
                         output.accept(ModBlocks.LAPIS_WINDOW_STEPPED_BLOCK_BOTTOM.get());
                         output.accept(ModBlocks.SANDSTONE_WINDOW_STEPPED_BLOCK_BOTTOM.get());
-                        output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER.get());
-                        output.accept(ModBlocks.CHISELED_SANDSTONE_STEPPED_BOTTOM_CORNER.get());
-                        output.accept(ModBlocks.LAPIS_STEPPED_BOTTOM_CORNER.get());
-                        output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK.get());
+
                         output.accept(ModBlocks.LAPIS_BANDED_EXTENDED_BLOCK.get());
-                        output.accept(ModBlocks.LAPIS_EXTENDED_BLOCK.get());
-                        output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_CORNER.get());
                         output.accept(ModBlocks.LAPIS_BANDED_EXTENDED_BLOCK_CORNER.get());
-                        output.accept(ModBlocks.LAPIS_EXTENDED_BLOCK_CORNER.get());
+
                         output.accept(ModBlocks.SANDSTONE_DIAGONAL_WALL.get());
-                        output.accept(ModBlocks.SANDSTONE_PEAK_DIAGONAL.get());
-
-                        output.accept(ModBlocks.GRASS_TWO.get());
-
-                        output.accept(ModBlocks.SANDSTONE_PEAK_CORNER_DIAGONAL.get());
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_DIAGONAL.get());
-                        output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER_DIAGONAL.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_DIAGONAL.get());
-                        output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_CORNER_DIAGONAL.get());
+                        output.accept(ModBlocks.SANDSTONE_PEAK_DIAGONAL.get());
 
                         output.accept(ModBlocks.SANDSTONE_ROUND_WINDOW.get());
                         output.accept(ModBlocks.SANDSTONE_ROUND_WINDOW_EXTENDED.get());
@@ -60,82 +55,70 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_ROUND_WINDOW_EXTENDED.get());
                         output.accept(ModBlocks.SANDSTONE_WINDOW_RECTANGLE.get());
                         output.accept(ModBlocks.SANDSTONE_WINDOW_RECTANGLE_STEPPED.get());
+
                         output.accept(ModBlocks.POLISHED_SANDSTONE_FENCE.get());
 
-                        // output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
-                        // output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.GRASS_TWO.get());
 
-                        // output.accept(ModBlocks.ALEXANDRITE_ORE.get());
-                        // output.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get());
-                        // output.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
-                        // output.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
+                    }).build());
 
-                        // output.accept(ModBlocks.ALEXANDRITE_STAIRS.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_SLAB.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_BUTTON.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_FENCE.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_WALL.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_DOOR.get());
-                        // output.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+    public static final RegistryObject<CreativeModeTab> MC_BABYLON_TAB = CREATIVE_MODE_TABS.register("mc_babylon_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Blocks.SANDSTONE))
+                    .title(Component.translatable("creativetab.mc_babylon_tab"))
+                    .displayItems((displayParameters, output) -> {
 
-                        // output.accept(Blocks.NETHER_BRICKS);
-                        // output.accept(Blocks.CRACKED_NETHER_BRICKS);
-                        // output.accept(Blocks.NETHER_BRICK_STAIRS);
-                        // output.accept(Blocks.NETHER_BRICK_SLAB);
-                        // output.accept(Blocks.NETHER_BRICK_WALL);
-                        // output.accept(Blocks.CHISELED_NETHER_BRICKS);
-                        // output.accept(Blocks.RED_NETHER_BRICKS);
-                        // output.accept(Blocks.RED_NETHER_BRICK_STAIRS);
-                        // output.accept(Blocks.RED_NETHER_BRICK_SLAB);
-                        // output.accept(Blocks.RED_NETHER_BRICK_WALL);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_BRICKS);
-                        // output.accept(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_BRICK_WALL);
-                        // output.accept(Blocks.WHITE_WOOL);
-                        // output.accept(Blocks.LIGHT_GRAY_WOOL);
-                        // output.accept(Blocks.WHITE_CARPET);
-                        // output.accept(Blocks.LIGHT_GRAY_CARPET);
-                        // output.accept(Blocks.MAGENTA_GLAZED_TERRACOTTA);
-                        // output.accept(Blocks.PINK_GLAZED_TERRACOTTA);
+                        output.accept(Blocks.SANDSTONE);
+                        output.accept(Blocks.BAMBOO_TRAPDOOR);
+                        output.accept(Blocks.WARPED_TRAPDOOR);
+                        output.accept(Blocks.DEEPSLATE_BRICKS);
+                        output.accept(Blocks.CRACKED_DEEPSLATE_BRICKS);
+                        output.accept(Blocks.DEEPSLATE_BRICK_STAIRS);
+                        output.accept(Blocks.DEEPSLATE_BRICK_SLAB);
+                        output.accept(Blocks.DEEPSLATE_BRICK_WALL);
+                        output.accept(Blocks.CRACKED_DEEPSLATE_TILES);
+                        output.accept(Blocks.NETHER_BRICKS);
+                        output.accept(Blocks.CRACKED_NETHER_BRICKS);
+                        output.accept(Blocks.NETHER_BRICK_STAIRS);
+                        output.accept(Blocks.NETHER_BRICK_SLAB);
+                        output.accept(Blocks.NETHER_BRICK_WALL);
+                        output.accept(Blocks.CHISELED_NETHER_BRICKS);
+                        output.accept(Blocks.RED_NETHER_BRICKS);
+                        output.accept(Blocks.RED_NETHER_BRICK_STAIRS);
+                        output.accept(Blocks.RED_NETHER_BRICK_SLAB);
+                        output.accept(Blocks.RED_NETHER_BRICK_WALL);
+                        output.accept(Blocks.POLISHED_BLACKSTONE);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_STAIRS);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_SLAB);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_WALL);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_BRICKS);
+                        output.accept(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_BRICK_SLAB);
+                        output.accept(Blocks.POLISHED_BLACKSTONE_BRICK_WALL);
+                        output.accept(Blocks.WHITE_WOOL);
+                        output.accept(Blocks.WHITE_CARPET);
+                        output.accept(Blocks.LIGHT_GRAY_WOOL);
+                        output.accept(Blocks.LIGHT_GRAY_CARPET);
+                        output.accept(Blocks.PURPLE_WOOL);
+                        output.accept(Blocks.PURPLE_CARPET);
+                        output.accept(Blocks.MAGENTA_WOOL);
+                        output.accept(Blocks.MAGENTA_CARPET);
+                        output.accept(Blocks.RED_CONCRETE);
+                        output.accept(Blocks.ANVIL);
+                        output.accept(Blocks.CHIPPED_ANVIL);
+                        output.accept(Blocks.DAMAGED_ANVIL);
+                        output.accept(Blocks.LECTERN);
+                        output.accept(Blocks.HOPPER);
 
-                        // output.accept(Blocks.CRACKED_DEEPSLATE_TILES);
-                        // output.accept(Blocks.DEEPSLATE_BRICKS);
-                        // output.accept(Blocks.CRACKED_DEEPSLATE_BRICKS);
-                        // output.accept(Blocks.DEEPSLATE_BRICK_STAIRS);
-                        // output.accept(Blocks.DEEPSLATE_BRICK_SLAB);
-                        // output.accept(Blocks.DEEPSLATE_BRICK_WALL);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_STAIRS);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_SLAB);
-                        // output.accept(Blocks.POLISHED_BLACKSTONE_WALL);
-                        // output.accept(Blocks.ORANGE_CONCRETE);
-                        // output.accept(Blocks.YELLOW_CONCRETE);
-                        // output.accept(Blocks.LIME_CONCRETE);
-                        // output.accept(Blocks.GREEN_CONCRETE);
-                        // output.accept(Blocks.CYAN_CONCRETE);
-                        // output.accept(Blocks.LIGHT_BLUE_CONCRETE);
-                        // output.accept(Blocks.BLUE_CONCRETE);
-                        // output.accept(Blocks.PURPLE_CONCRETE);
-                        // output.accept(Blocks.MAGENTA_CONCRETE);
-                        // output.accept(Blocks.PINK_CONCRETE);
-                        // output.accept(Blocks.LIME_CONCRETE_POWDER);
-                        // output.accept(Blocks.GREEN_CONCRETE_POWDER);
-                        // output.accept(Blocks.CYAN_CONCRETE_POWDER);
-                        // output.accept(Blocks.LIGHT_BLUE_CONCRETE_POWDER);
-                        // output.accept(Blocks.BLUE_CONCRETE_POWDER);
-                        // output.accept(Blocks.PURPLE_CONCRETE_POWDER);
-                        // output.accept(Blocks.MAGENTA_CONCRETE_POWDER);
-                        // output.accept(Blocks.PINK_CONCRETE_POWDER);
+                    }).build());
 
-                        // output.accept(Blocks.ANVIL);
-                        // output.accept(Blocks.CHIPPED_ANVIL);
-                        // output.accept(Blocks.DAMAGED_ANVIL);
-                        // output.accept(Blocks.LECTERN);
-                        // output.accept(Blocks.HOPPER);
+    public static final RegistryObject<CreativeModeTab> DEV_TAB = CREATIVE_MODE_TABS.register("dev_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PALM_LEAVES.get()))
+                    .title(Component.translatable("creativetab.dev_tab"))
+                    .displayItems((displayParameters, output) -> {
+
+                        output.accept(ModBlocks.BANANA_CORE_TOP.get());
+                        output.accept(ModBlocks.PALM_LEAVES_2.get());
 
                         output.accept(ModBlocks.PALM_CORE_BOTTOM.get());
                         output.accept(ModBlocks.PALM_CORE_TOP.get());

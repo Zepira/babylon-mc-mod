@@ -11,7 +11,9 @@
   "block.babylonmod.sapphire_block": "Ebony Sapling",
   "block.babylonmod.raw_sapphire_block": "Ebony Sapling",
 
-  "creativetab.babylon_tab": "Babylon Mod Tab",
+  "creativetab.babylon_tab": "Babylon Custom Blocks",
+  "creativetab.dev_tab": "Developer Tab",
+  "creativetab.mc_babylon_tab": "Babylon Repurposed Blocks",
 
   "block.babylonmod.palm_core_bottom": "Palm Core Bottom",
   "block.babylonmod.palm_core_top": "Palm Core Top",
