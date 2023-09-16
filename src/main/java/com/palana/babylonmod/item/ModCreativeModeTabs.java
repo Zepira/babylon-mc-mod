@@ -117,14 +117,14 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.dev_tab"))
                     .displayItems((displayParameters, output) -> {
 
-                        output.accept(ModBlocks.BANANA_CORE_TOP.get());
-                        output.accept(ModBlocks.PALM_LEAVES_2.get());
+                        // output.accept(ModBlocks.BANANA_CORE_TOP.get());
+                        // output.accept(ModBlocks.PALM_LEAVES_2.get());
 
-                        output.accept(ModBlocks.PALM_CORE_BOTTOM.get());
-                        output.accept(ModBlocks.PALM_CORE_TOP.get());
-                        output.accept(ModBlocks.PALM_CORE_FROND.get());
+                        // output.accept(ModBlocks.PALM_CORE_BOTTOM.get());
+                        // output.accept(ModBlocks.PALM_CORE_TOP.get());
+                        // output.accept(ModBlocks.PALM_CORE_FROND.get());
 
-                        output.accept(ModBlocks.PALM_LEAVES.get());
+                        // output.accept(ModBlocks.PALM_LEAVES.get());
 
                     }).build());
 
