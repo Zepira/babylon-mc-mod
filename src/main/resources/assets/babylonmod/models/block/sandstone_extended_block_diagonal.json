@@ -1,15 +1,15 @@
 {
   "credit": "Made with Blockbench",
   "parent": "minecraft:block/cube_all",
-  "render_type": "translucent",
   "textures": {
     "0": "babylonmod:block/sandstone",
     "particle": "babylonmod:block/sandstone"
   },
   "elements": [
     {
-      "from": [-4, 0, 0],
-      "to": [16, 16, 16],
+      "from": [-2.84, 0, -2.8],
+      "to": [16.46, 16, 22.8],
+      "rotation": { "angle": 45, "axis": "y", "origin": [0, 0, 0] },
       "faces": {
         "north": { "uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0" },
         "east": { "uv": [0, 0, 16, 16], "texture": "#0" },
@@ -18,14 +18,6 @@
         "up": { "uv": [0, 0, 16, 16], "texture": "#0" },
         "down": { "uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0" }
       }
-    }
-  ],
-  "groups": [
-    {
-      "name": "group",
-      "origin": [0, 0, 0],
-      "color": 0,
-      "children": [0]
     }
   ]
 }
