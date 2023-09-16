@@ -210,6 +210,11 @@ public class ModBlocks {
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
+        public static final RegistryObject<Block> POLISHED_SANDSTONE_FENCE = registerBlock(
+                        "polished_sandstone_fence",
+                        () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+
         public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
