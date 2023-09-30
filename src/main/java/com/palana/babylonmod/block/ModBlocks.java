@@ -69,6 +69,14 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
+        public static final RegistryObject<Block> LAPIS_STEPPED_PEAK = registerBlock("lapis_stepped_peak",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_STEPPED_PEAK_CORNER = registerBlock("lapis_stepped_peak_corner",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER = registerBlock("sandstone_peak_corner",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));

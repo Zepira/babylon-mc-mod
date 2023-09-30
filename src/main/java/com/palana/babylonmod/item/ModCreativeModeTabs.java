@@ -24,6 +24,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_PEAK.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK_CORNER.get());
                         output.accept(ModBlocks.LAPIS_PEAK_CORNER.get());
+                        output.accept(ModBlocks.LAPIS_STEPPED_PEAK.get());
+                        output.accept(ModBlocks.LAPIS_STEPPED_PEAK_CORNER.get());
 
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM.get());
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_SHADOW.get());
