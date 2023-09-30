@@ -26,7 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_PEAK_CORNER.get());
 
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_SHADOW.get());
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER.get());
+                        output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER_SHADOW.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_CORNER.get());
 
@@ -67,7 +69,6 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.mc_babylon_tab"))
                     .displayItems((displayParameters, output) -> {
 
-                        output.accept(Blocks.SANDSTONE);
                         output.accept(Blocks.BAMBOO_TRAPDOOR);
                         output.accept(Blocks.WARPED_TRAPDOOR);
                         output.accept(Blocks.DEEPSLATE_BRICKS);
@@ -109,6 +110,12 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.DAMAGED_ANVIL);
                         output.accept(Blocks.LECTERN);
                         output.accept(Blocks.HOPPER);
+                        output.accept(Blocks.CHISELED_SANDSTONE);
+                        output.accept(Blocks.SANDSTONE);
+                        output.accept(Blocks.SANDSTONE_STAIRS);
+                        output.accept(Blocks.SANDSTONE_SLAB);
+                        output.accept(Blocks.SANDSTONE_WALL);
+                        output.accept(Blocks.RED_SANDSTONE);
 
                     }).build());
 

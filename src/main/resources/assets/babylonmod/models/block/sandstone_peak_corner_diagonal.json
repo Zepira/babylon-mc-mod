@@ -4,8 +4,8 @@
   "ambientocclusion": false,
   "render_type": "translucent",
   "textures": {
-    "0": "babylonmod:block/sandstone",
-    "particle": "babylonmod:block/sandstone"
+    "0": "babylonmod:block/sandstone_top_dark",
+    "particle": "babylonmod:block/sandstone_top_dark"
   },
   "elements": [
     {

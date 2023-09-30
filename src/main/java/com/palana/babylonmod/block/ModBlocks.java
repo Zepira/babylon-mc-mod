@@ -77,6 +77,11 @@ public class ModBlocks {
                         "sandstone_stepped_block_bottom",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM_SHADOW = registerBlock(
+                        "sandstone_stepped_block_bottom_shadow",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
         
         public static final RegistryObject<Block> CHISELED_SANDSTONE_STEPPED_BLOCK_BOTTOM = registerBlock(
                         "chiseled_sandstone_stepped_block_bottom",
@@ -115,6 +120,11 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> SANDSTONE_STEPPED_BOTTOM_CORNER = registerBlock(
                         "sandstone_stepped_bottom_corner",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BOTTOM_CORNER_SHADOW = registerBlock(
+                        "sandstone_stepped_bottom_corner_shadow",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 

@@ -3,8 +3,8 @@
   "parent": "minecraft:block/cube_all",
   "render_type": "translucent",
   "textures": {
-    "0": "babylonmod:block/sandstone",
-    "particle": "babylonmod:block/sandstone"
+    "0": "babylonmod:block/sandstone_mid_dark",
+    "particle": "babylonmod:block/sandstone_mid_dark"
   },
   "elements": [
     {
