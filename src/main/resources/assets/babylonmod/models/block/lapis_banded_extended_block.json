@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "babylonmod:block/lapis_band",
 		"1": "babylonmod:block/lapis_main",
-		"2": "babylonmod:block/sandstone",
+		"3": "babylonmod:block/sandstone_mid_dark",
 		"particle": "babylonmod:block/lapis_band"
 	},
 	"elements": [
@@ -13,7 +13,7 @@
 			"to": [16, 16, 16],
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#3"},
 				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"west": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
