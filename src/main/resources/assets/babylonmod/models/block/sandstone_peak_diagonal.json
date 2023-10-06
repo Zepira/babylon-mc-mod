@@ -2,6 +2,7 @@
   "credit": "Made with Blockbench",
   "parent": "minecraft:block/cube_all",
   "ambientocclusion": false,
+  "render_type": "translucent",
   "textures": {
     "0": "babylonmod:block/sandstone_top_dark",
     "particle": "babylonmod:block/sandstone_top_dark"

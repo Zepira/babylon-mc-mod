@@ -4,6 +4,7 @@ import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
 import com.palana.babylonmod.block.custom.ModDirectionalBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
+import com.palana.babylonmod.block.custom.ModPassableStairBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.item.ModItems;
 import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
@@ -77,6 +78,28 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
+        public static final RegistryObject<Block> SANDSTONE_INSET_WINDOW = registerBlock("sandstone_inset_window",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_SINGLE_ARCH = registerBlock("sandstone_single_arch",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_DOUBLE_ARCH = registerBlock("sandstone_double_arch",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> NARROW_SANDSTONE_SINGLE_ARCH = registerBlock(
+                        "narrow_sandstone_single_arch",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+
+        public static final RegistryObject<Block> NARROW_SANDSTONE_SINGLE_ARCH_TALL = registerBlock(
+                        "narrow_sandstone_single_arch_tall",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER = registerBlock("sandstone_peak_corner",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
@@ -90,7 +113,7 @@ public class ModBlocks {
                         "sandstone_stepped_block_bottom_shadow",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-        
+
         public static final RegistryObject<Block> CHISELED_SANDSTONE_STEPPED_BLOCK_BOTTOM = registerBlock(
                         "chiseled_sandstone_stepped_block_bottom",
                         () -> new ModDirectionalBlock(
