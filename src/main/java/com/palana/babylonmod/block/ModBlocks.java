@@ -90,6 +90,10 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
+        public static final RegistryObject<Block> SANDSTONE_TRIPLE_ARCH = registerBlock("sandstone_triple_arch",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+
         public static final RegistryObject<Block> NARROW_SANDSTONE_SINGLE_ARCH = registerBlock(
                         "narrow_sandstone_single_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
