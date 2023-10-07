@@ -4,9 +4,9 @@
   "ambientocclusion": false,
   "render_type": "translucent",
   "textures": {
-    "0": "babylonmod:block/sandstone",
-    "1": "babylonmod:block/shadowed_sandstone",
-    "particle": "babylonmod:block/sandstone"
+    "0": "babylonmod:block/lapis_brick_match_sandstone",
+    "1": "babylonmod:block/lapis_brick_match_sandstone",
+    "particle": "babylonmod:block/lapis_brick_match_sandstone"
   },
   "elements": [
     {

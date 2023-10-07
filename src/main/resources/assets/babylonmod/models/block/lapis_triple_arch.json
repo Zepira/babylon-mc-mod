@@ -3,8 +3,9 @@
   "loader": "forge:obj",
   "ambientocclusion": false,
   "render_type": "translucent",
-  "model": "babylonmod:models/block/sandstone_triple_arch_top_inner.obj",
+  "flip-v": true,
+  "model": "babylonmod:models/block/lapis_triple_arch.obj",
   "textures": {
-    "particle": "minecraft:block/sandstone"
+    "particle": "babylonmod:block/lapis_brick"
   }
 }

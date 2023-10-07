@@ -1,0 +1,10 @@
+{
+  "__comment": "Add the following line on the same level as a 'model' declaration.",
+  "loader": "forge:obj",
+  "ambientocclusion": false,
+  "render_type": "translucent",
+  "model": "babylonmod:models/block/sandstone_triple_arch_top_center.obj",
+  "textures": {
+    "particle": "minecraft:block/sandstone"
+  }
+}

@@ -94,6 +94,11 @@ public class ModBlocks {
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
+        public static final RegistryObject<Block> SANDSTONE_TRIPLE_ARCH_CENTER = registerBlock(
+                        "sandstone_triple_arch_center",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_SLAB).noOcclusion()));
+
         public static final RegistryObject<Block> NARROW_SANDSTONE_SINGLE_ARCH = registerBlock(
                         "narrow_sandstone_single_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
@@ -101,6 +106,37 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> NARROW_SANDSTONE_SINGLE_ARCH_TALL = registerBlock(
                         "narrow_sandstone_single_arch_tall",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_INSET_WINDOW = registerBlock("lapis_inset_window",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_SINGLE_ARCH = registerBlock("lapis_single_arch",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_DOUBLE_ARCH = registerBlock("lapis_double_arch",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_TRIPLE_ARCH = registerBlock("lapis_triple_arch",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_TRIPLE_ARCH_CENTER = registerBlock(
+                        "lapis_triple_arch_center",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_SLAB).noOcclusion()));
+
+        public static final RegistryObject<Block> NARROW_LAPIS_SINGLE_ARCH = registerBlock(
+                        "narrow_lapis_single_arch",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+
+        public static final RegistryObject<Block> NARROW_LAPIS_SINGLE_ARCH_TALL = registerBlock(
+                        "narrow_lapis_single_arch_tall",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
@@ -141,7 +177,7 @@ public class ModBlocks {
         public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK = registerBlock(
                         "sandstone_extended_block",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
         public static final RegistryObject<Block> LAPIS_BANDED_EXTENDED_BLOCK = registerBlock(
                         "lapis_banded_extended_block",
@@ -151,7 +187,7 @@ public class ModBlocks {
         public static final RegistryObject<Block> LAPIS_EXTENDED_BLOCK = registerBlock(
                         "lapis_extended_block",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_STEPPED_BOTTOM_CORNER = registerBlock(
                         "sandstone_stepped_bottom_corner",

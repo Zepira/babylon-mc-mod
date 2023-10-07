@@ -66,8 +66,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_SINGLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_DOUBLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_TRIPLE_ARCH.get());
+                        output.accept(ModBlocks.SANDSTONE_TRIPLE_ARCH_CENTER.get());
+
                         output.accept(ModBlocks.NARROW_SANDSTONE_SINGLE_ARCH.get());
                         output.accept(ModBlocks.NARROW_SANDSTONE_SINGLE_ARCH_TALL.get());
+
+                        output.accept(ModBlocks.LAPIS_INSET_WINDOW.get());
+                        output.accept(ModBlocks.LAPIS_SINGLE_ARCH.get());
+                        output.accept(ModBlocks.LAPIS_DOUBLE_ARCH.get());
+                        output.accept(ModBlocks.LAPIS_TRIPLE_ARCH.get());
+                        output.accept(ModBlocks.LAPIS_TRIPLE_ARCH_CENTER.get());
+                        output.accept(ModBlocks.NARROW_LAPIS_SINGLE_ARCH.get());
+                        output.accept(ModBlocks.NARROW_LAPIS_SINGLE_ARCH_TALL.get());
 
                         output.accept(ModBlocks.GRASS_TWO.get());
 
