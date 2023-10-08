@@ -2,21 +2,18 @@
   "variants": {
     "facing=east": {
       "model": "babylonmod:block/sandstone_triple_arch_top_center",
-      "y": 90,
-      "uvlock": true
+      "y": 90
     },
     "facing=west": {
       "model": "babylonmod:block/sandstone_triple_arch_top_center",
-      "y": 270,
-      "uvlock": true
+      "y": 270
     },
     "facing=north": {
       "model": "babylonmod:block/sandstone_triple_arch_top_center"
     },
     "facing=south": {
       "model": "babylonmod:block/sandstone_triple_arch_top_center",
-      "y": 180,
-      "uvlock": true
+      "y": 180
     }
   }
 }

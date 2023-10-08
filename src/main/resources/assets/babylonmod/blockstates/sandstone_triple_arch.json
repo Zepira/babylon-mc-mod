@@ -2,41 +2,34 @@
   "variants": {
     "facing=east,half=bottom": {
       "model": "babylonmod:block/sandstone_triple_arch",
-      "y": 360,
-      "uvlock": true
+      "y": 360
     },
     "facing=west,half=bottom": {
       "model": "babylonmod:block/sandstone_triple_arch",
-      "y": 180,
-      "uvlock": true
+      "y": 180
     },
     "facing=north,half=bottom": {
       "model": "babylonmod:block/sandstone_triple_arch",
-      "y": 270,
-      "uvlock": true
+      "y": 270
     },
     "facing=south,half=bottom": {
       "model": "babylonmod:block/sandstone_triple_arch",
-      "y": 90,
-      "uvlock": true
+      "y": 90
     },
     "facing=east,half=top": {
       "model": "babylonmod:block/sandstone_triple_arch_top"
     },
     "facing=south,half=top": {
       "model": "babylonmod:block/sandstone_triple_arch_top",
-      "y": 90,
-      "uvlock": true
+      "y": 90
     },
     "facing=west,half=top": {
       "model": "babylonmod:block/sandstone_triple_arch_top",
-      "y": 180,
-      "uvlock": true
+      "y": 180
     },
     "facing=north,half=top": {
       "model": "babylonmod:block/sandstone_triple_arch_top",
-      "y": 270,
-      "uvlock": true
+      "y": 270
     }
   }
 }
