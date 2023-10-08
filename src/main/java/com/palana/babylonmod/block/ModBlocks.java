@@ -88,7 +88,11 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> SANDSTONE_DOUBLE_ARCH = registerBlock("sandstone_double_arch",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+
+        public static final RegistryObject<Block> NARROW_SANDSTONE_PEAK = registerBlock("narrow_sandstone_peak",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_TRIPLE_ARCH = registerBlock("sandstone_triple_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),

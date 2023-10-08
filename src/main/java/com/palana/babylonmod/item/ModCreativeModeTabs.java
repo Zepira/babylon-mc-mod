@@ -74,6 +74,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.NARROW_SANDSTONE_SINGLE_ARCH.get());
                         output.accept(ModBlocks.NARROW_SANDSTONE_SINGLE_ARCH_TALL.get());
+                        output.accept(ModBlocks.NARROW_SANDSTONE_PEAK.get());
 
                         output.accept(ModBlocks.LAPIS_INSET_WINDOW.get());
                         output.accept(ModBlocks.LAPIS_SINGLE_ARCH.get());
