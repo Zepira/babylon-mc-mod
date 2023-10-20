@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "translucent",
 	"textures": {
 		"0": "babylonmod:block/sandstone_top_dark",
 		"1": "babylonmod:block/sandstone_mid_dark",

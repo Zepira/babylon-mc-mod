@@ -92,7 +92,7 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> NARROW_SANDSTONE_PEAK = registerBlock("narrow_sandstone_peak",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_TRIPLE_ARCH = registerBlock("sandstone_triple_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
@@ -101,12 +101,12 @@ public class ModBlocks {
         public static final RegistryObject<Block> SANDSTONE_TRIPLE_ARCH_CENTER = registerBlock(
                         "sandstone_triple_arch_center",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_SLAB)));
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         public static final RegistryObject<Block> SANDSTONE_FIVE_ARCH_CENTER = registerBlock(
                         "sandstone_five_arch_center",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_SLAB).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_FIVE_ARCH_TOP = registerBlock(
                         "sandstone_five_arch_top",
@@ -122,6 +122,26 @@ public class ModBlocks {
                         "sandstone_five_arch_bottom",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_FIVE_ARCH_CENTER = registerBlock(
+                        "lapis_five_arch_center",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_FIVE_ARCH_TOP = registerBlock(
+                        "lapis_five_arch_top",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_FIVE_ARCH_MID = registerBlock(
+                        "lapis_five_arch_mid",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> LAPIS_FIVE_ARCH_BOTTOM = registerBlock(
+                        "lapis_five_arch_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> NARROW_SANDSTONE_SINGLE_ARCH = registerBlock(
                         "narrow_sandstone_single_arch",

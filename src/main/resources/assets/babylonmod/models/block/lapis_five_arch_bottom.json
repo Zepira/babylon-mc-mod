@@ -1,0 +1,11 @@
+{
+  "__comment": "Add the following line on the same level as a 'model' declaration.",
+  "loader": "forge:obj",
+  "ambientocclusion": true,
+  "render_type": "translucent",
+  "flip-v": true,
+  "model": "babylonmod:models/block/lapis_five_arch_bottom.obj",
+  "textures": {
+    "particle": "minecraft:block/lapis_brick_match_sandstone"
+  }
+}

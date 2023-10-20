@@ -83,6 +83,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_TRIPLE_ARCH_CENTER.get());
                         output.accept(ModBlocks.NARROW_LAPIS_SINGLE_ARCH.get());
                         output.accept(ModBlocks.NARROW_LAPIS_SINGLE_ARCH_TALL.get());
+                        output.accept(ModBlocks.LAPIS_FIVE_ARCH_CENTER.get());
+                        output.accept(ModBlocks.LAPIS_FIVE_ARCH_TOP.get());
+                        output.accept(ModBlocks.LAPIS_FIVE_ARCH_MID.get());
+                        output.accept(ModBlocks.LAPIS_FIVE_ARCH_BOTTOM.get());
 
                         output.accept(ModBlocks.GRASS_TWO.get());
 
@@ -140,6 +144,20 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.SANDSTONE_SLAB);
                         output.accept(Blocks.SANDSTONE_WALL);
                         output.accept(Blocks.RED_SANDSTONE);
+                        output.accept(Blocks.CUT_RED_SANDSTONE);
+                        output.accept(Blocks.CUT_RED_SANDSTONE_SLAB);
+                        output.accept(Blocks.POLISHED_GRANITE);
+                        output.accept(Blocks.POLISHED_GRANITE_STAIRS);
+                        output.accept(Blocks.STONE_BRICKS);
+                        output.accept(Blocks.STONE_BRICK_STAIRS);
+                        output.accept(Blocks.POLISHED_ANDESITE);
+                        output.accept(Blocks.POLISHED_ANDESITE_SLAB);
+                        output.accept(Blocks.POLISHED_ANDESITE_STAIRS);
+                        output.accept(Blocks.POLISHED_DEEPSLATE);
+                        output.accept(Blocks.POLISHED_DEEPSLATE_SLAB);
+                        output.accept(Blocks.POLISHED_DEEPSLATE_STAIRS);
+                        output.accept(Blocks.CHERRY_STAIRS);
+                        output.accept(Blocks.CHERRY_SLAB);
 
                     }).build());
 
