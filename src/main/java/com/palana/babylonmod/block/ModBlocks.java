@@ -4,6 +4,7 @@ import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
 import com.palana.babylonmod.block.custom.ModDirectionalBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
+import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.item.ModItems;
@@ -12,17 +13,12 @@ import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
 import com.palana.babylonmod.worldgen.tree.WalnutTreeGrower;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -340,6 +336,35 @@ public class ModBlocks {
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
+        public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_GOLD_LEFT = registerBlock(
+                        "ishtar_gate_auroch_gold_left",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_WHITE_LEFT = registerBlock(
+                        "ishtar_gate_auroch_white_left",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_GOLD_LEFT = registerBlock(
+                        "ishtar_gate_dragon_gold_left",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_WHITE_LEFT = registerBlock(
+                        "ishtar_gate_dragon_white_left",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> LAPIS_GATE_BORDER_RIGHT = registerBlock(
+                        "lapis_gate_border_right",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> LAPIS_GATE_BORDER_LEFT = registerBlock(
+                        "lapis_gate_border_left",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
         public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 

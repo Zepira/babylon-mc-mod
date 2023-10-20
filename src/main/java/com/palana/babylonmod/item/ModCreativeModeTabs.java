@@ -89,6 +89,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_FIVE_ARCH_BOTTOM.get());
 
                         output.accept(ModBlocks.GRASS_TWO.get());
+                        output.accept(ModBlocks.LAPIS_GATE_BORDER_LEFT.get());
+                        output.accept(ModBlocks.LAPIS_GATE_BORDER_RIGHT.get());
 
                     }).build());
 
