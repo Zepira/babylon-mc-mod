@@ -356,6 +356,26 @@ public class ModBlocks {
                         () -> new ModIshtarGateBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
 
+        public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_GOLD_RIGHT = registerBlock(
+                        "ishtar_gate_auroch_gold_right",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_WHITE_RIGHT = registerBlock(
+                        "ishtar_gate_auroch_white_right",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_GOLD_RIGHT = registerBlock(
+                        "ishtar_gate_dragon_gold_right",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
+        public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_WHITE_RIGHT = registerBlock(
+                        "ishtar_gate_dragon_white_right",
+                        () -> new ModIshtarGateBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+
         public static final RegistryObject<Block> LAPIS_GATE_BORDER_RIGHT = registerBlock(
                         "lapis_gate_border_right",
                         () -> new ModDirectionalBlock(

@@ -92,6 +92,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_GATE_BORDER_LEFT.get());
                         output.accept(ModBlocks.LAPIS_GATE_BORDER_RIGHT.get());
 
+                        output.accept(ModBlocks.ISHTAR_GATE_AUROCH_GOLD_LEFT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_AUROCH_WHITE_LEFT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_DRAGON_GOLD_LEFT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_DRAGON_WHITE_LEFT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_AUROCH_GOLD_RIGHT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_AUROCH_WHITE_RIGHT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_DRAGON_GOLD_RIGHT.get());
+                        output.accept(ModBlocks.ISHTAR_GATE_DRAGON_WHITE_RIGHT.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MC_BABYLON_TAB = CREATIVE_MODE_TABS.register("mc_babylon_tab",

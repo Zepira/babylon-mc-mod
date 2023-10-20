@@ -31,6 +31,7 @@ public class ModIshtarGateBlock extends Block {
 
                 BlockState rightBlock;
                 BlockState leftBlock;
+                String blockName = this.defaultBlockState().getBlock().getDescriptionId();
 
                 BlockGetter blockgetter = placeContext.getLevel();
                 BlockPos blockpos = placeContext.getClickedPos();
@@ -51,7 +52,7 @@ public class ModIshtarGateBlock extends Block {
                 }
 
                 if (belowBlock.getBlock().getDescriptionId()
-                                .equals(this.defaultBlockState().getBlock().getDescriptionId())) {
+                                .equals(blockName)) {
                         if (belowBlock.getValue(VARIANT) == 3) {
                                 return this.defaultBlockState().setValue(VARIANT, 1);
                         } else if (belowBlock.getValue(VARIANT) == 4) {
@@ -62,7 +63,7 @@ public class ModIshtarGateBlock extends Block {
                                 return this.defaultBlockState().setValue(VARIANT, 4);
                         }
                 } else if (leftBlock.getBlock().getDescriptionId()
-                                .equals(this.defaultBlockState().getBlock().getDescriptionId())) {
+                                .equals(blockName)) {
                         if (leftBlock.getValue(VARIANT) == 3) {
                                 return this.defaultBlockState().setValue(VARIANT, 4);
                         } else {
