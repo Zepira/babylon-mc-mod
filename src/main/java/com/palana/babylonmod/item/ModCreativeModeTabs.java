@@ -52,6 +52,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_DIAGONAL.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_DIAGONAL.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK_DIAGONAL.get());
+                        output.accept(ModBlocks.EXTENDED_CORNER.get());
 
                         output.accept(ModBlocks.SANDSTONE_ROUND_WINDOW.get());
                         output.accept(ModBlocks.SANDSTONE_ROUND_WINDOW_EXTENDED.get());

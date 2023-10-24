@@ -16,7 +16,7 @@
     },
     "facing=south": {
       "model": "babylonmod:block/lapis_gate_border_right",
-      "y": 180,
+      "y": 270,
       "uvlock": true
     }
   }

@@ -1,20 +1,123 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east": [{
       "model": "babylonmod:block/lapis_peak",
+      "weight": 30,
       "y": 360
-    },
-    "facing=west": {
+    },{
+      "model": "babylonmod:block/lapis_peak1",
+      "weight": 15,
+      "y": 360
+    },{
+      "model": "babylonmod:block/lapis_peak2",
+      "weight": 15,
+      "y": 360
+    },{
+      "model": "babylonmod:block/lapis_peak3",
+      "weight": 15,
+      "y": 360
+    },{
+      "model": "babylonmod:block/lapis_peak4",
+      "weight": 15,
+      "y": 360
+    },{
+      "model": "babylonmod:block/lapis_peak5",
+      "weight": 15,
+      "y": 360
+    },{
+      "model": "babylonmod:block/lapis_peak6",
+      "weight": 15,
+      "y": 360
+    }],
+    
+    "facing=west": [{
       "model": "babylonmod:block/lapis_peak",
+      "weight": 30,
       "y": 180
-    },
-    "facing=north": {
+    },{
+      "model": "babylonmod:block/lapis_peak1",
+      "weight": 15,
+      "y": 180
+    },{
+      "model": "babylonmod:block/lapis_peak2",
+      "weight": 15,
+      "y": 180
+    },{
+      "model": "babylonmod:block/lapis_peak3",
+      "weight": 15,
+      "y": 180
+    },{
+      "model": "babylonmod:block/lapis_peak4",
+      "weight": 15,
+      "y": 180
+    },{
+      "model": "babylonmod:block/lapis_peak5",
+      "weight": 15,
+      "y": 180
+    },{
+      "model": "babylonmod:block/lapis_peak6",
+      "weight": 15,
+      "y": 180
+    }],
+    
+    "facing=north": [{
       "model": "babylonmod:block/lapis_peak",
+      "weight": 30,
       "y": 270
-    },
-    "facing=south": {
+    },{
+      "model": "babylonmod:block/lapis_peak1",
+      "weight": 15,
+      "y": 270
+    },{
+      "model": "babylonmod:block/lapis_peak2",
+      "weight": 15,
+      "y": 270
+    },{
+      "model": "babylonmod:block/lapis_peak3",
+      "weight": 15,
+      "y": 270
+    },{
+      "model": "babylonmod:block/lapis_peak4",
+      "weight": 15,
+      "y": 270
+    },{
+      "model": "babylonmod:block/lapis_peak5",
+      "weight": 15,
+      "y": 270
+    },{
+      "model": "babylonmod:block/lapis_peak6",
+      "weight": 15,
+      "y": 270
+    }],
+    
+    "facing=south": [{
       "model": "babylonmod:block/lapis_peak",
+      "weight": 30,
       "y": 90
-    }
+    },{
+      "model": "babylonmod:block/lapis_peak1",
+      "weight": 15,
+      "y": 90
+    },{
+      "model": "babylonmod:block/lapis_peak2",
+      "weight": 15,
+      "y": 90
+    },{
+      "model": "babylonmod:block/lapis_peak3",
+      "weight": 15,
+      "y": 90
+    },{
+      "model": "babylonmod:block/lapis_peak4",
+      "weight": 15,
+      "y": 90
+    },{
+      "model": "babylonmod:block/lapis_peak5",
+      "weight": 15,
+      "y": 90
+    },{
+      "model": "babylonmod:block/lapis_peak6",
+      "weight": 15,
+      "y": 90
+    }]
   }
 }

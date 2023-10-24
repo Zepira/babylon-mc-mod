@@ -4,8 +4,8 @@
   "render_type": "translucent",
   "ambientocclusion": false,
   "textures": {
-    "0": "babylonmod:block/cracked_deepslate_bricks6",
-    "particle": "babylonmod:block/cracked_deepslate_bricks6"
+    "0": "babylonmod:block/cracked_deepslate_bricks",
+    "particle": "babylonmod:block/cracked_deepslate_bricks"
   },
   "elements": [
     {

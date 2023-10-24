@@ -182,7 +182,7 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER = registerBlock("sandstone_peak_corner",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM = registerBlock(
                         "sandstone_stepped_block_bottom",
@@ -252,7 +252,12 @@ public class ModBlocks {
         public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK_CORNER = registerBlock(
                         "sandstone_extended_block_corner",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+        
+        public static final RegistryObject<Block> EXTENDED_CORNER = registerBlock(
+                        "extended_corner",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
         public static final RegistryObject<Block> LAPIS_BANDED_EXTENDED_BLOCK_CORNER = registerBlock(
                         "lapis_banded_extended_block_corner",
@@ -274,7 +279,7 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         public static final RegistryObject<Block> GRASS_TWO = registerBlock("grass_two",
-                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.PODZOL)));
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER_DIAGONAL = registerBlock(
                         "sandstone_peak_corner_diagonal",
@@ -339,52 +344,53 @@ public class ModBlocks {
         public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_GOLD_LEFT = registerBlock(
                         "ishtar_gate_auroch_gold_left",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_WHITE_LEFT = registerBlock(
                         "ishtar_gate_auroch_white_left",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_GOLD_LEFT = registerBlock(
                         "ishtar_gate_dragon_gold_left",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_WHITE_LEFT = registerBlock(
                         "ishtar_gate_dragon_white_left",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_GOLD_RIGHT = registerBlock(
                         "ishtar_gate_auroch_gold_right",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_WHITE_RIGHT = registerBlock(
                         "ishtar_gate_auroch_white_right",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_GOLD_RIGHT = registerBlock(
                         "ishtar_gate_dragon_gold_right",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> ISHTAR_GATE_DRAGON_WHITE_RIGHT = registerBlock(
                         "ishtar_gate_dragon_white_right",
                         () -> new ModIshtarGateBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> LAPIS_GATE_BORDER_RIGHT = registerBlock(
                         "lapis_gate_border_right",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> LAPIS_GATE_BORDER_LEFT = registerBlock(
                         "lapis_gate_border_left",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE)));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
         public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
                         () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
 
