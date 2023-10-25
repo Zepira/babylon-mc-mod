@@ -2,16 +2,14 @@ package com.palana.babylonmod.block;
 
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
+import com.palana.babylonmod.block.custom.ModDynamicSandBlock;
 import com.palana.babylonmod.block.custom.ModDirectionalBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
 import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
-import com.palana.babylonmod.block.custom.ModSaplingBlock;
+import com.palana.babylonmod.block.custom.SandType;
 import com.palana.babylonmod.item.ModItems;
 import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
-//import com.palana.babylonmod.worldgen.tree.WalnutTreeGrower;
-import com.palana.babylonmod.worldgen.tree.WalnutTreeGrower;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -48,6 +46,13 @@ public class ModBlocks {
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
 
         public static final RegistryObject<Block> PALM_LEAVES = registerBlock("palm_leaves",
+                        () -> new DirectionalPalmLeaves(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+
+        public static final RegistryObject<Block> PALM_LEAVES_2 = registerBlock("palm_leaves_2",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> PALM_TOP = registerBlock("palm_top",
                         () -> new DirectionalPalmLeaves(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
 
@@ -253,7 +258,7 @@ public class ModBlocks {
                         "sandstone_extended_block_corner",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
-        
+
         public static final RegistryObject<Block> EXTENDED_CORNER = registerBlock(
                         "extended_corner",
                         () -> new ModDirectionalBlock(
@@ -341,6 +346,11 @@ public class ModBlocks {
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
+        public static final RegistryObject<Block> DYNAMIC_SAND = registerBlock(
+                        "dynamic_sand",
+                        () -> new ModDynamicSandBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+
         public static final RegistryObject<Block> ISHTAR_GATE_AUROCH_GOLD_LEFT = registerBlock(
                         "ishtar_gate_auroch_gold_left",
                         () -> new ModIshtarGateBlock(
@@ -418,85 +428,9 @@ public class ModBlocks {
                                 }
                         });
 
-        public static final RegistryObject<Block> WALNUT_SAPLING = registerBlock("walnut_sapling",
-                        () -> new ModSaplingBlock(new WalnutTreeGrower(),
-                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
         public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
                         () -> new SaplingBlock(new PalmTreeGrower(),
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-        // public static final RegistryObject<Block> ALEXANDRITE_BLOCK =
-        // registerBlock("alexandrite_block",
-        // () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
-        // .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-        // .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
-        // public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK =
-        // registerBlock("raw_alexandrite_block",
-        // () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
-        // .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
-        // .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
-
-        // public static final RegistryObject<Block> ALEXANDRITE_ORE =
-        // registerBlock("alexandrite_ore",
-        // () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-        // .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
-        // public static final RegistryObject<Block> DEEPSLATE_ALEXANDRITE_ORE =
-        // registerBlock("deepslate_alexandrite_ore",
-        // () -> new
-        // DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-        // .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
-        // public static final RegistryObject<Block> END_STONE_ALEXANDRITE_ORE =
-        // registerBlock("end_stone_alexandrite_ore",
-        // () -> new
-        // DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
-        // .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(5, 8)));
-        // public static final RegistryObject<Block> NETHER_ALEXANDRITE_ORE =
-        // registerBlock("nether_alexandrite_ore",
-        // () -> new
-        // DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
-        // .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
-
-        // public static final RegistryObject<Block> ALEXANDRITE_STAIRS =
-        // registerBlock("alexandrite_stairs",
-        // () -> new StairBlock(() ->
-        // ModBlocks.ALEXANDRITE_BLOCK.get().defaultBlockState(),
-        // BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS).sound(SoundType.METAL)));
-        // public static final RegistryObject<Block> ALEXANDRITE_SLAB =
-        // registerBlock("alexandrite_slab",
-        // () -> new SlabBlock(
-        // BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB).sound(SoundType.METAL)));
-
-        // public static final RegistryObject<Block> ALEXANDRITE_PRESSURE_PLATE =
-        // registerBlock(
-        // "alexandrite_pressure_plate",
-        // () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
-        // BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS).sound(SoundType.METAL),
-        // BlockSetType.IRON));
-        // public static final RegistryObject<Block> ALEXANDRITE_BUTTON =
-        // registerBlock("alexandrite_button",
-        // () -> new ButtonBlock(
-        // BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB).sound(SoundType.METAL),
-        // BlockSetType.IRON, 10, true));
-
-        // public static final RegistryObject<Block> ALEXANDRITE_FENCE =
-        // registerBlock("alexandrite_fence",
-        // () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-        // public static final RegistryObject<Block> ALEXANDRITE_FENCE_GATE =
-        // registerBlock("alexandrite_fence_gate",
-        // () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
-        // SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-        // public static final RegistryObject<Block> ALEXANDRITE_WALL =
-        // registerBlock("alexandrite_wall",
-        // () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
-        // public static final RegistryObject<Block> ALEXANDRITE_DOOR =
-        // registerBlock("alexandrite_door",
-        // () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
-        // BlockSetType.IRON));
-        // public static final RegistryObject<Block> ALEXANDRITE_TRAPDOOR =
-        // registerBlock("alexandrite_trapdoor",
-        // () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK),
-        // BlockSetType.IRON));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

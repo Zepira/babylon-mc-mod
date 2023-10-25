@@ -38,6 +38,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // // blockItem(ModBlocks.LAPIS_BRICK_STAIRS);
         // blockItem(ModBlocks.LAPIS_BRICK_SLAB);
 
+        // fenceBlock((FenceBlock) ModBlocks.POLISHED_SANDSTONE_FENCE.get(),
+        // blockTexture(ModBlocks.LAPIS_BRICK.get()));
+
         logBlock(((RotatedPillarBlock) ModBlocks.WALNUT_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
         // axisBlock(((RotatedPillarBlock) ModBlocks.WALNUT_WOOD.get()),
@@ -59,7 +62,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // blockWithItem(ModBlocks.WALNUT_PLANKS);
 
         leavesBlock(ModBlocks.WALNUT_LEAVES);
-        saplingBlock(ModBlocks.WALNUT_SAPLING);
         // leavesBlock(ModBlocks.PALM_LEAVES);
         saplingBlock(ModBlocks.PALM_SAPLING);
 

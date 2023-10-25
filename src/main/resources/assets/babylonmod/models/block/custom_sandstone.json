@@ -6,6 +6,6 @@
   "render_type": "translucent",
   "model": "babylonmod:models/block/custom_sandstone.obj",
   "textures": {
-    "particle": "minecraft:block/oak_leaves"
+    "particle": "minecraft:block/sandstone"
   }
 }

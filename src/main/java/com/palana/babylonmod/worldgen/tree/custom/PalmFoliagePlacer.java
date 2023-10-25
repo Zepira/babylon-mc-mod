@@ -9,22 +9,27 @@ import org.jline.utils.Log;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.palana.babylonmod.block.ModBlocks;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
 import com.palana.babylonmod.worldgen.tree.ModFoliagePlacerTypes;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 
 public class PalmFoliagePlacer extends FoliagePlacer {
     public static final Codec<PalmFoliagePlacer> FOLIAGE_CODEC = RecordCodecBuilder
@@ -56,31 +61,42 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         // attachment.pos().above(0), 2, i + 1,
         // attachment.doubleTrunk());
         // }
+        TreeConfiguration topBlockTreeConfiguration = new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
+                new PalmTrunkPlacer(4, 3, 2),
+                BlockStateProvider.simple(ModBlocks.PALM_TOP.get()),
+                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
+                new TwoLayersFeatureSize(1, 0, 2)).build();
 
         System.out.println("HELLOE!");
-
+        BlockState baseBlockstate = topBlockTreeConfiguration.foliageProvider.getState(pRandom,
+                attachment.pos());
         BlockState blockstate = pConfig.foliageProvider.getState(pRandom,
                 attachment.pos());
-        DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
         // tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig, attachment.pos());
         // blockstate = blockstate.setValue(FACING, Direction.WEST);
         // blockstate = DirectionalPalmLeaves.rotate(blockstate, Direction.WEST);
 
         // top block (no facing)
-        foliageSetter.set(attachment.pos(), blockstate);
+        foliageSetter.set(attachment.pos(), baseBlockstate);
+
+        DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+        BooleanProperty IS_CORNER = BlockStateProperties.CRACKED;
 
         blockstate = blockstate.setValue(FACING, Direction.EAST);
-        foliageSetter.set(attachment.pos().below(1).east(1), blockstate);
+        foliageSetter.set(attachment.pos().east(1), blockstate);
+        blockstate = blockstate.setValue(IS_CORNER, Boolean.valueOf(true));
+        foliageSetter.set(attachment.pos().east(1).north(1), blockstate);
 
         blockstate = blockstate.setValue(FACING, Direction.WEST);
-        foliageSetter.set(attachment.pos().below(1).west(1), blockstate);
+        foliageSetter.set(attachment.pos().west(1), blockstate);
 
         blockstate = blockstate.setValue(FACING, Direction.NORTH);
-        foliageSetter.set(attachment.pos().below(1).north(1), blockstate);
+        foliageSetter.set(attachment.pos().north(1), blockstate);
 
         blockstate = blockstate.setValue(FACING, Direction.SOUTH);
-        foliageSetter.set(attachment.pos().below(1).south(1), blockstate);
+        foliageSetter.set(attachment.pos().south(1), blockstate);
         // System.out.println(blockstate.getValue(FACING));
         // tryPlaceLeaf(pLevel, foliageSetter, pRandom, pConfig,
         // attachment.pos().below(1).north(1));

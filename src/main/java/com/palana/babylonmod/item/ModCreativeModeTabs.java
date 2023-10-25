@@ -178,6 +178,10 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.dev_tab"))
                     .displayItems((displayParameters, output) -> {
 
+                        output.accept(ModBlocks.DYNAMIC_SAND.get());
+                        output.accept(ModBlocks.PALM_SAPLING.get());
+                        // output.accept(ModBlocks.CUSTOM_SANDSTONE.get());
+
                         // output.accept(ModBlocks.BANANA_CORE_TOP.get());
                         // output.accept(ModBlocks.PALM_LEAVES_2.get());
 
@@ -185,7 +189,7 @@ public class ModCreativeModeTabs {
                         // output.accept(ModBlocks.PALM_CORE_TOP.get());
                         // output.accept(ModBlocks.PALM_CORE_FROND.get());
 
-                        // output.accept(ModBlocks.PALM_LEAVES.get());
+                        output.accept(ModBlocks.PALM_LEAVES.get());
 
                     }).build());
 

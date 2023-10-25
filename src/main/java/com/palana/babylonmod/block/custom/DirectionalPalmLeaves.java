@@ -3,8 +3,11 @@ package com.palana.babylonmod.block.custom;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.Tilt;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
@@ -29,6 +32,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class DirectionalPalmLeaves extends Block {
     public static DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static BooleanProperty IS_CORNER = BlockStateProperties.CRACKED;
 
     public DirectionalPalmLeaves(Properties pProperties) {
 
@@ -41,12 +45,13 @@ public class DirectionalPalmLeaves extends Block {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
-        System.out.println("HELLOE THIS IS THE LEAVES BLCOK!" + placeContext.getHorizontalDirection());
-        return this.defaultBlockState().setValue(FACING, placeContext.getHorizontalDirection());
+        System.out.println("HELLOE THIS IS THE LEAVES BLCOK!");
+        return this.defaultBlockState().setValue(FACING, placeContext.getHorizontalDirection()).setValue(IS_CORNER,
+                Boolean.valueOf(true));
     }
 
     public BlockState getRandomBlockState() {
-        System.out.println("HELLOE!" + this.defaultBlockState().getValue(FACING));
+        System.out.println("HELLOE Is corner:" + this.defaultBlockState().getValue(IS_CORNER));
 
         return this.defaultBlockState().setValue(FACING, Direction.EAST);
     }
@@ -58,6 +63,7 @@ public class DirectionalPalmLeaves extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+        builder.add(IS_CORNER);
     }
 
 }

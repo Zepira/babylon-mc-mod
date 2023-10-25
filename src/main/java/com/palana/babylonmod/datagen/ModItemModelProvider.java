@@ -28,7 +28,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         // wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
 
         // simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
-        saplingItem(ModBlocks.WALNUT_SAPLING);
         saplingItem(ModBlocks.PALM_SAPLING);
 
     }
