@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "babylonmod:item/palm_leaves"
+    "layer0": "babylonmod:item/nature/palm_leaves"
   }
 }

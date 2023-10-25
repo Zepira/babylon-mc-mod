@@ -1,9 +1,0 @@
-{
-  "__comment": "Palana_babylon - 2023",
-  "variants": {
-    "": {
-      "model": "babylonmod:block/lapis_brick",
-      "weight": 30
-    }
-  }
-}

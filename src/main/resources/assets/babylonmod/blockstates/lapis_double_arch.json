@@ -1,19 +1,19 @@
 {
   "variants": {
     "facing=east": {
-      "model": "babylonmod:block/lapis_double_arch",
+      "model": "babylonmod:block/arches/lapis_double_arch",
       "y": 360
     },
     "facing=west": {
-      "model": "babylonmod:block/lapis_double_arch",
+      "model": "babylonmod:block/arches/lapis_double_arch",
       "y": 180
     },
     "facing=north": {
-      "model": "babylonmod:block/lapis_double_arch",
+      "model": "babylonmod:block/arches/lapis_double_arch",
       "y": 270
     },
     "facing=south": {
-      "model": "babylonmod:block/lapis_double_arch",
+      "model": "babylonmod:block/arches/lapis_double_arch",
       "y": 90
     }
   }

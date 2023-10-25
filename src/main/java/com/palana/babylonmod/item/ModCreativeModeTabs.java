@@ -16,7 +16,7 @@ public class ModCreativeModeTabs {
             .create(Registries.CREATIVE_MODE_TAB, BabylonMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> BABYLON_TAB = CREATIVE_MODE_TABS.register("babylon_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LAPIS_BRICK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(Blocks.SANDSTONE))
                     .title(Component.translatable("creativetab.babylon_tab"))
                     .displayItems((displayParameters, output) -> {
 
@@ -174,7 +174,7 @@ public class ModCreativeModeTabs {
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> DEV_TAB = CREATIVE_MODE_TABS.register("dev_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PALM_LEAVES.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.LAPIS_GATE_BORDER_LEFT.get()))
                     .title(Component.translatable("creativetab.dev_tab"))
                     .displayItems((displayParameters, output) -> {
 

@@ -1,19 +1,19 @@
 {
   "variants": {
     "facing=east": {
-      "model": "babylonmod:block/sandstone_stepped_bottom_corner_diagonal",
+      "model": "babylonmod:block/walls/sandstone_stepped_bottom_corner_diagonal",
       "y": 360
     },
     "facing=west": {
-      "model": "babylonmod:block/sandstone_stepped_bottom_corner_diagonal",
+      "model": "babylonmod:block/walls/sandstone_stepped_bottom_corner_diagonal",
       "y": 180
     },
     "facing=north": {
-      "model": "babylonmod:block/sandstone_stepped_bottom_corner_diagonal",
+      "model": "babylonmod:block/walls/sandstone_stepped_bottom_corner_diagonal",
       "y": 270
     },
     "facing=south": {
-      "model": "babylonmod:block/sandstone_stepped_bottom_corner_diagonal",
+      "model": "babylonmod:block/walls/sandstone_stepped_bottom_corner_diagonal",
       "y": 90
     }
   }

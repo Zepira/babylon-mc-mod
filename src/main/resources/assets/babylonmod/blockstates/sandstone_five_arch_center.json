@@ -1,20 +1,20 @@
 {
   "variants": {
     "facing=east": {
-      "model": "babylonmod:block/sandstone_five_arch_center",
+      "model": "babylonmod:block/arches/sandstone_five_arch_center",
       "y": 90,
       "uvlock": true
     },
     "facing=west": {
-      "model": "babylonmod:block/sandstone_five_arch_center",
+      "model": "babylonmod:block/arches/sandstone_five_arch_center",
       "y": 270,
       "uvlock": true
     },
     "facing=north": {
-      "model": "babylonmod:block/sandstone_five_arch_center"
+      "model": "babylonmod:block/arches/sandstone_five_arch_center"
     },
     "facing=south": {
-      "model": "babylonmod:block/sandstone_five_arch_center",
+      "model": "babylonmod:block/arches/sandstone_five_arch_center",
       "y": 180,
       "uvlock": true
     }

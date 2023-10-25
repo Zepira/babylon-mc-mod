@@ -2,28 +2,29 @@
   "__comment": "Palana_babylon - 2023",
   "variants": {
     "facing=east": {
-      "model": "babylonmod:block/palm_leaves"
-    },
-    "facing=east, is_corner=true": {
-      "model": "babylonmod:block/palm_top"
-    },
-    "facing=east, cracked=true": {
-      "model": "babylonmod:block/palm_top"
-    },
-    "is_corner=true": {
-      "model": "babylonmod:block/palm_top"
-    },
-    "facing=west": {
-      "model": "babylonmod:block/palm_leaves",
-      "y": 180
-    },
-    "facing=south": {
-      "model": "babylonmod:block/palm_leaves",
+      "model": "babylonmod:block/nature/palm_leaves",
       "y": 90
     },
-    "facing=north": {
-      "model": "babylonmod:block/palm_leaves",
+    "facing=west": {
+      "model": "babylonmod:block/nature/palm_leaves",
       "y": 270
+    },
+    "facing=south": {
+      "model": "babylonmod:block/nature/palm_leaves",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "babylonmod:block/nature/palm_leaves",
+      "y": 360
+    },
+    "facing=east, is_corner=true": {
+      "model": "babylonmod:block/nature/palm_top"
+    },
+    "facing=east, cracked=true": {
+      "model": "babylonmod:block/nature/palm_top"
+    },
+    "is_corner=true": {
+      "model": "babylonmod:block/nature/palm_top"
     }
   }
 }

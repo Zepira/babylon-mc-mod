@@ -1,19 +1,19 @@
 {
   "variants": {
     "facing=east": {
-      "model": "babylonmod:block/lapis_extended_block",
+      "model": "babylonmod:block/walls/lapis_extended_block",
       "y": 360
     },
     "facing=west": {
-      "model": "babylonmod:block/lapis_extended_block",
+      "model": "babylonmod:block/walls/lapis_extended_block",
       "y": 180
     },
     "facing=north": {
-      "model": "babylonmod:block/lapis_extended_block",
+      "model": "babylonmod:block/walls/lapis_extended_block",
       "y": 270
     },
     "facing=south": {
-      "model": "babylonmod:block/lapis_extended_block",
+      "model": "babylonmod:block/walls/lapis_extended_block",
       "y": 90
     }
   }

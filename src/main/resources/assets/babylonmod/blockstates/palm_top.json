@@ -2,7 +2,7 @@
   "__comment": "Palana_babylon - 2023",
   "variants": {
     "": {
-      "model": "babylonmod:block/palm_top"
+      "model": "babylonmod:block/nature/palm_top"
     }
   }
 }

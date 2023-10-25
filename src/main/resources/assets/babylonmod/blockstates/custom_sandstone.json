@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "babylonmod:block/custom_sandstone"
+      "model": "babylonmod:block/development/custom_sandstone"
     }
   }
 }

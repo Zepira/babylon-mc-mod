@@ -1,0 +1,11 @@
+# Blender 3.6.1 MTL File: 'palm leaves.blend'
+# www.blender.org
+
+newmtl Material.002
+map_Kd babylonmod:block/palm_frond
+
+newmtl Material.004
+map_Kd babylonmod:block/palm_frond
+
+newmtl Material.005
+map_Kd babylonmod:block/palm_frond
