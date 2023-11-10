@@ -1,3 +1,5 @@
-# Made in Blockbench 4.8.3
-newmtl Sandstone
-map_Kd D:/Minecraft/BabylonMod/src/main/resources/assets/babylonmod/textures/block/sandstone.png
+# Blender MTL File: 'Five Arch.blend'
+# Material Count: 1
+
+newmtl Material.001
+map_Kd babylonmod:block/sandstone

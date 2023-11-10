@@ -1,9 +1,7 @@
 {
   "__comment": "Add the following line on the same level as a 'model' declaration.",
   "loader": "forge:obj",
-  "ambientocclusion": true,
-  "render_type": "translucent",
-  "flip-v": true,
+  "flip_v": true,
   "model": "babylonmod:models/block/arches/sandstone_five_arch_center.obj",
   "textures": {
     "particle": "minecraft:block/sandstone"

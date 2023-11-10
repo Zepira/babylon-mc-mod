@@ -22,7 +22,7 @@ public class ModDirectionalBlock extends DirectionalBlock implements SimpleWater
     public ModDirectionalBlock(Properties pProperties) {
 
         super(pProperties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(WATERLOGGED, true));
+        this.registerDefaultState(this.getStateDefinition().any().setValue(WATERLOGGED, false));
     }
 
     @Nullable
