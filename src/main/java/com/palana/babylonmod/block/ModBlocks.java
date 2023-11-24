@@ -5,6 +5,7 @@ import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
 import com.palana.babylonmod.block.custom.ModDynamicSandBlock;
 import com.palana.babylonmod.block.custom.ModDirectionalBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
+import com.palana.babylonmod.block.custom.ModGrassBlock;
 import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
 import com.palana.babylonmod.block.custom.SandType;
@@ -284,7 +285,7 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         public static final RegistryObject<Block> GRASS_TWO = registerBlock("grass_two",
-                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
+                        () -> new ModGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER_DIAGONAL = registerBlock(
                         "sandstone_peak_corner_diagonal",
