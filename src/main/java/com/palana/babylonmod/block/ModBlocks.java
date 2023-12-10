@@ -8,6 +8,8 @@ import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
 import com.palana.babylonmod.block.custom.ModGrassBlock;
 import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
+import com.palana.babylonmod.block.custom.ModSaplingBlock;
+import com.palana.babylonmod.block.custom.ModScalableBlock;
 import com.palana.babylonmod.block.custom.SandType;
 import com.palana.babylonmod.item.ModItems;
 import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
@@ -56,6 +58,10 @@ public class ModBlocks {
         public static final RegistryObject<Block> PALM_TOP = registerBlock("palm_top",
                         () -> new DirectionalPalmLeaves(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).noLootTable()));
+
+        public static final RegistryObject<Block> PALM_TRUNK = registerBlock("palm_trunk",
+                        () -> new ModScalableBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
         public static final RegistryObject<Block> PALM_CORE_FROND = registerBlock("palm_core_frond",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
@@ -402,35 +408,8 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
-        public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log",
-                        () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-
-        public static final RegistryObject<Block> WALNUT_LOG = registerBlock("walnut_log",
-                        () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-
-        public static final RegistryObject<Block> WALNUT_LEAVES = registerBlock("walnut_leaves",
-                        () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
-                                @Override
-                                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return true;
-                                }
-
-                                @Override
-                                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return 60;
-                                }
-
-                                @Override
-                                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
-                                                Direction direction) {
-                                        return 30;
-                                }
-                        });
-
         public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
-                        () -> new SaplingBlock(new PalmTreeGrower(),
+                        () -> new ModSaplingBlock(new PalmTreeGrower(),
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

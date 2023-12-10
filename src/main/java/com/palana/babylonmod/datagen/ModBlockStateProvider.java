@@ -41,7 +41,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // fenceBlock((FenceBlock) ModBlocks.POLISHED_SANDSTONE_FENCE.get(),
         // blockTexture(ModBlocks.LAPIS_BRICK.get()));
 
-        logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
+        // logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));
         // axisBlock(((RotatedPillarBlock) ModBlocks.WALNUT_WOOD.get()),
         // blockTexture(ModBlocks.WALNUT_LOG.get()),
         // blockTexture(ModBlocks.WALNUT_LOG.get()));
@@ -52,7 +52,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // new ResourceLocation(BabylonMod.MOD_ID, "block/stripped_walnut_log"),
         // new ResourceLocation(BabylonMod.MOD_ID, "block/stripped_walnut_log"));
 
-        blockItem(ModBlocks.PALM_LOG);
+        // blockItem(ModBlocks.PALM_LOG);
         // blockItem(ModBlocks.WALNUT_WOOD);
         // blockItem(ModBlocks.STRIPPED_WALNUT_LOG);
         // blockItem(ModBlocks.STRIPPED_WALNUT_WOOD);

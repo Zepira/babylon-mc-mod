@@ -9,7 +9,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelSimulatedReader;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
@@ -37,44 +40,74 @@ public class PalmTrunkPlacer extends TrunkPlacer {
             BiConsumer<BlockPos, BlockState> pBlockSetter,
             RandomSource pRandom, int pFreeTreeHeight, BlockPos pPos, TreeConfiguration pConfig) {
         // THIS IS WHERE THE BLOCK PLACING LOGIC IS!
-        setDirtAt(pLevel, pBlockSetter, pRandom, pPos.below(), pConfig);
+
         int height = pFreeTreeHeight + pRandom.nextInt(heightRandA, heightRandA + 1)
                 + pRandom.nextInt(heightRandB - 1, heightRandB + 1);
-        System.out.println("HEIGHT!");
-        System.out.println(height);
+
+        IntegerProperty SIZE = IntegerProperty.create("size", 0, 4);
         for (int i = 0; i < pFreeTreeHeight; i++) {
+            BlockState blockstate = pConfig.trunkProvider.getState(pRandom, pPos);
+            // pBlockSetter.accept(pPos.above(i), blockstate.setValue(SIZE, 4));
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+
+            pBlockSetter.accept(pPos, blockstate.setValue(SIZE, 0));
+            System.out.println("Tree loop. height=" + pFreeTreeHeight + "current height=" + i);
             placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
-
-            if (i % 2 == 0 && pRandom.nextBoolean()) {
-                // if (pRandom.nextFloat() > 0.25f) {
-                // for (int x = 0; x < 4; x++) {
-                // placeLog(pLevel, pBlockSetter, pRandom,
-                // pPos.above(i).relative(Direction.NORTH, x), pConfig);
-
-                // }
-                // }
-
-                // if (pRandom.nextFloat() > 0.25f) {
-                // for (int x = 0; x < 4; x++) {
-                // placeLog(pLevel, pBlockSetter, pRandom,
-                // pPos.above(i).relative(Direction.SOUTH, x), pConfig);
-                // }
-                // }
-
-                // if (pRandom.nextFloat() > 0.25f) {
-                // for (int x = 0; x < 4; x++) {
-                // placeLog(pLevel, pBlockSetter, pRandom,
-                // pPos.above(i).relative(Direction.EAST, x), pConfig);
-                // }
-                // }
-
-                // if (pRandom.nextFloat() > 0.25f) {
-                // for (int x = 0; x < 4; x++) {
-                // placeLog(pLevel, pBlockSetter, pRandom,
-                // pPos.above(i).relative(Direction.WEST, x), pConfig);
-                // }
-                // }
+            if (i < pFreeTreeHeight - 2) {
+                pBlockSetter.accept(pPos.above(i), blockstate.setValue(SIZE, 0));
+                placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+            } else {
+                int sizeVal = pFreeTreeHeight - i;
+                System.out.println("sizeVal" + sizeVal + "currentHeight" + i);
+                pBlockSetter.accept(pPos.above(i), blockstate.setValue(SIZE, 0));
+                placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
             }
+
+            // BiConsumer<BlockPos, BlockState> newBlockSetter = (pos, state) -> {
+
+            // BlockState newState = blockstate.setValue(SIZE, 3);
+            // pBlockSetter.accept(pPos.above(i), newState);
+
+            // };
+
+            // emulate this:
+            // foliageSetter.set(attachment.pos().east(1), blockstate);
+
+            // pBlockSetter.accept(pPos, blockstate.setValue(SIZE, 3));
+
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+            // if (i % 2 == 0 && pRandom.nextBoolean()) {
+
+            // if (pRandom.nextFloat() > 0.25f) {
+            // for (int x = 0; x < 4; x++) {
+            // pBlockSetter.accept(pPos, blockstate.setValue(SIZE, 3));
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+            // }
+            // }
+
+            // if (pRandom.nextFloat() > 0.25f) {
+            // for (int x = 0; x < 4; x++) {
+            // pBlockSetter.accept(pPos, blockstate.setValue(SIZE, 2));
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+            // }
+            // }
+
+            // if (pRandom.nextFloat() > 0.25f) {
+            // for (int x = 0; x < 4; x++) {
+            // pBlockSetter.accept(pPos, blockstate.setValue(SIZE, 1));
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+            // }
+            // }
+
+            // if (pRandom.nextFloat() > 0.25f) {
+            // for (int x = 0; x < 4; x++) {
+            // pBlockSetter.accept(pPos, blockstate.setValue(SIZE, 5));
+            // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
+            // }
+            // }
+            // }
         }
 
         return ImmutableList.of(new FoliagePlacer.FoliageAttachment(pPos.above(pFreeTreeHeight), 0, false));// add

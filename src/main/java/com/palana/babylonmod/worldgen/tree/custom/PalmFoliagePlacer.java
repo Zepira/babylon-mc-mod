@@ -62,7 +62,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         // attachment.doubleTrunk());
         // }
         TreeConfiguration topBlockTreeConfiguration = new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
+                BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
                 new PalmTrunkPlacer(4, 3, 2),
                 BlockStateProvider.simple(ModBlocks.PALM_TOP.get()),
                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
@@ -87,7 +87,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         blockstate = blockstate.setValue(FACING, Direction.EAST);
         foliageSetter.set(attachment.pos().east(1), blockstate);
         blockstate = blockstate.setValue(IS_CORNER, Boolean.valueOf(true));
-        foliageSetter.set(attachment.pos().east(1).north(1), blockstate);
+        // foliageSetter.set(attachment.pos().east(1).north(1), blockstate);
 
         blockstate = blockstate.setValue(FACING, Direction.WEST);
         foliageSetter.set(attachment.pos().west(1), blockstate);

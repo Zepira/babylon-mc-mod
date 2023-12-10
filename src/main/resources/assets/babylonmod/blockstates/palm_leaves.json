@@ -3,25 +3,19 @@
   "variants": {
     "facing=east": {
       "model": "babylonmod:block/nature/palm_leaves",
-      "y": 90
+      "y": 180
     },
     "facing=west": {
       "model": "babylonmod:block/nature/palm_leaves",
-      "y": 270
+      "y": 360
     },
     "facing=south": {
       "model": "babylonmod:block/nature/palm_leaves",
-      "y": 180
+      "y": 270
     },
     "facing=north": {
       "model": "babylonmod:block/nature/palm_leaves",
-      "y": 360
-    },
-    "facing=east, is_corner=true": {
-      "model": "babylonmod:block/nature/palm_top"
-    },
-    "facing=east, cracked=true": {
-      "model": "babylonmod:block/nature/palm_top"
+      "y": 90
     },
     "is_corner=true": {
       "model": "babylonmod:block/nature/palm_top"

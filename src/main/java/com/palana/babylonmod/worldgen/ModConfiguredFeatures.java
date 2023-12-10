@@ -55,7 +55,7 @@ public class ModConfiguredFeatures {
                 // BlockPlaceContext(HorizontalDirectionalBlock));
 
                 register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                                BlockStateProvider.simple(ModBlocks.PALM_LOG.get()),
+                                BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
                                 new PalmTrunkPlacer(4, 3, 2),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
