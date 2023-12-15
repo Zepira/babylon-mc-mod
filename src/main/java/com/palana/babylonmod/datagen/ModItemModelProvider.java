@@ -29,6 +29,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
         saplingItem(ModBlocks.PALM_SAPLING);
+        saplingItem(ModBlocks.PALM_SAPLING_SMALL);
+        saplingItem(ModBlocks.PALM_SAPLING_LARGE);
 
     }
 

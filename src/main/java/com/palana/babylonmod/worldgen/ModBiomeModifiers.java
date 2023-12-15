@@ -16,7 +16,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
         public static final ResourceKey<BiomeModifier> ADD_TREE_PALM = registerKey("add_tree_palm");
-        public static final ResourceKey<BiomeModifier> ADD_DYNAMIC_SAND = registerKey("add_dynamic_sand");
+        // public static final ResourceKey<BiomeModifier> ADD_DYNAMIC_SAND =
+        // registerKey("add_dynamic_sand");
         public static final ResourceKey<BiomeModifier> ADD_SNAPDRAGON = registerKey("add_snapdragon");
 
         public static void bootstrap(BootstapContext<BiomeModifier> context) {
@@ -28,10 +29,11 @@ public class ModBiomeModifiers {
                                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PALM_PLACED_KEY)),
                                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-                context.register(ADD_DYNAMIC_SAND, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DYNAMIC_SAND_PLACED_KEY)),
-                                GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
+                // context.register(ADD_DYNAMIC_SAND, new
+                // ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                // biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                // HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DYNAMIC_SAND_PLACED_KEY)),
+                // GenerationStep.Decoration.TOP_LAYER_MODIFICATION));
 
         }
 

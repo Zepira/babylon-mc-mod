@@ -11,6 +11,7 @@ import com.palana.babylonmod.block.custom.ModPassableStairBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.block.custom.ModScalableBlock;
 import com.palana.babylonmod.block.custom.SandType;
+import com.palana.babylonmod.block.custom.SizeType;
 import com.palana.babylonmod.item.ModItems;
 import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
 import net.minecraft.core.BlockPos;
@@ -284,7 +285,8 @@ public class ModBlocks {
         // Diagonal tower shit
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL = registerBlock(
                         "sandstone_diagonal_wall",
-                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_DIAGONAL = registerBlock("sandstone_peak_diagonal",
                         () -> new ModDirectionalBlock(
@@ -409,7 +411,15 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling",
-                        () -> new ModSaplingBlock(new PalmTreeGrower(),
+                        () -> new ModSaplingBlock(new PalmTreeGrower(null, null, SizeType.MEDIUM),
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> PALM_SAPLING_LARGE = registerBlock("palm_sapling_large",
+                        () -> new ModSaplingBlock(new PalmTreeGrower(null, null, SizeType.LARGE),
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> PALM_SAPLING_SMALL = registerBlock("palm_sapling_small",
+                        () -> new ModSaplingBlock(new PalmTreeGrower(null, null, SizeType.SMALL),
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -170,6 +170,9 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.POLISHED_DEEPSLATE_STAIRS);
                         output.accept(Blocks.CHERRY_STAIRS);
                         output.accept(Blocks.CHERRY_SLAB);
+                        output.accept(ModBlocks.PALM_SAPLING_SMALL.get());
+                        output.accept(ModBlocks.PALM_SAPLING_LARGE.get());
+                        output.accept(ModBlocks.PALM_TRUNK.get());
 
                     }).build());
 
@@ -180,6 +183,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.DYNAMIC_SAND.get());
                         output.accept(ModBlocks.PALM_SAPLING.get());
+
                         // output.accept(ModBlocks.CUSTOM_SANDSTONE.get());
 
                         // output.accept(ModBlocks.BANANA_CORE_TOP.get());

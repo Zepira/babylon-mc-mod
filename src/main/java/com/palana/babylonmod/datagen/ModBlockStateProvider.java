@@ -61,6 +61,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // leavesBlock(ModBlocks.PALM_LEAVES);
         saplingBlock(ModBlocks.PALM_SAPLING);
+        saplingBlock(ModBlocks.PALM_SAPLING_SMALL);
+        saplingBlock(ModBlocks.PALM_SAPLING_LARGE);
 
         // blockItem(ModBlocks.PALM_LOG);
         // logBlock(((RotatedPillarBlock) ModBlocks.PALM_LOG.get()));

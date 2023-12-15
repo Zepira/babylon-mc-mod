@@ -10,6 +10,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.ModBlocks;
+import com.palana.babylonmod.block.custom.SizeType;
 import com.palana.babylonmod.worldgen.tree.custom.PalmFoliagePlacer;
 import com.palana.babylonmod.worldgen.tree.custom.PalmTrunkPlacer;
 
@@ -39,26 +40,46 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-        public static final ResourceKey<ConfiguredFeature<?, ?>> PALM_KEY = registerKey("palm");
-        public static final ResourceKey<ConfiguredFeature<?, ?>> DYNAMIC_SAND_KEY = registerKey("dynamic_sand");
-        public static final ResourceKey<ConfiguredFeature<?, ?>> SNAPDRAGON_KEY = registerKey("snapdragon");
+        public static final ResourceKey<ConfiguredFeature<?, ?>> PALM_KEY_SMALL = registerKey("palm_small");
+        public static final ResourceKey<ConfiguredFeature<?, ?>> PALM_KEY_MEDIUM = registerKey("palm_medium");
+        public static final ResourceKey<ConfiguredFeature<?, ?>> PALM_KEY_LARGE = registerKey("palm_large");
+        // public static final ResourceKey<ConfiguredFeature<?, ?>> DYNAMIC_SAND_KEY =
+        // registerKey("dynamic_sand");
+        // public static final ResourceKey<ConfiguredFeature<?, ?>> SNAPDRAGON_KEY =
+        // registerKey("snapdragon");
 
         public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
                 RuleTest dynamicSandReplaceables = new BlockMatchTest(Blocks.GRASS_BLOCK);
 
-                List<OreConfiguration.TargetBlockState> dynamicSandBlocks = List.of(
-                                OreConfiguration.target(dynamicSandReplaceables,
-                                                ModBlocks.DYNAMIC_SAND.get().defaultBlockState()));
+                // List<OreConfiguration.TargetBlockState> dynamicSandBlocks = List.of(
+                // OreConfiguration.target(dynamicSandReplaceables,
+                // ModBlocks.DYNAMIC_SAND.get().defaultBlockState()));
 
                 // Block leavesBlock = ModBlocks.PALM_LEAVES.get();
                 // leavesBlock.getStateForPlacement(new
                 // BlockPlaceContext(HorizontalDirectionalBlock));
 
-                register(context, PALM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                // pHeightRandA = minHeight
+                // pHeightRandB = maxHeight
+                register(context, PALM_KEY_SMALL, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                                 BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
-                                new PalmTrunkPlacer(4, 3, 2),
+                                new PalmTrunkPlacer(1, 2, 5),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
-                                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
+                                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 0),
+                                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+                register(context, PALM_KEY_MEDIUM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                                BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
+                                new PalmTrunkPlacer(1, 5, 8),
+                                BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
+                                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 1),
+                                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+                register(context, PALM_KEY_LARGE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                                BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
+                                new PalmTrunkPlacer(1, 8, 10),
+                                BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
+                                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 2),
                                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
                 // register(context, DYNAMIC_SAND_KEY, Feature.ORE, new

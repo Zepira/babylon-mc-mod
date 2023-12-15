@@ -1,24 +1,53 @@
 {
   "__comment": "Palana_babylon - 2023",
   "variants": {
-    "facing=east": {
+    "facing=east,size=small": {
+      "model": "babylonmod:block/nature/palm_leaves_small",
+      "y": 180
+    },
+    "facing=west,size=small": {
+      "model": "babylonmod:block/nature/palm_leaves_small",
+      "y": 360
+    },
+    "facing=south,size=small": {
+      "model": "babylonmod:block/nature/palm_leaves_small",
+      "y": 270
+    },
+    "facing=north,size=small": {
+      "model": "babylonmod:block/nature/palm_leaves_small",
+      "y": 90
+    },
+    "facing=east,size=large": {
+      "model": "babylonmod:block/nature/palm_leaves_large",
+      "y": 180
+    },
+    "facing=west,size=large": {
+      "model": "babylonmod:block/nature/palm_leaves_large",
+      "y": 360
+    },
+    "facing=south,size=large": {
+      "model": "babylonmod:block/nature/palm_leaves_large",
+      "y": 270
+    },
+    "facing=north,size=large": {
+      "model": "babylonmod:block/nature/palm_leaves_large",
+      "y": 90
+    },
+    "facing=east,size=medium": {
       "model": "babylonmod:block/nature/palm_leaves",
       "y": 180
     },
-    "facing=west": {
+    "facing=west,size=medium": {
       "model": "babylonmod:block/nature/palm_leaves",
       "y": 360
     },
-    "facing=south": {
+    "facing=south,size=medium": {
       "model": "babylonmod:block/nature/palm_leaves",
       "y": 270
     },
-    "facing=north": {
+    "facing=north,size=medium": {
       "model": "babylonmod:block/nature/palm_leaves",
       "y": 90
-    },
-    "is_corner=true": {
-      "model": "babylonmod:block/nature/palm_top"
     }
   }
 }

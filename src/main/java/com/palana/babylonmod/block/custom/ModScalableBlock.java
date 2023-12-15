@@ -1,6 +1,7 @@
 package com.palana.babylonmod.block.custom;
 
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -12,7 +13,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import org.jetbrains.annotations.Nullable;
 
 public class ModScalableBlock extends DirectionalBlock {
-    public static IntegerProperty SIZE = IntegerProperty.create("size", 0, 4);
+    public static EnumProperty<SizeType> SIZE = EnumProperty.create("size", SizeType.class);
 
     public ModScalableBlock(Properties pProperties) {
 
@@ -23,7 +24,7 @@ public class ModScalableBlock extends DirectionalBlock {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
-        return this.defaultBlockState().setValue(SIZE, 0);
+        return this.defaultBlockState().setValue(SIZE, SizeType.MEDIUM);
     }
 
     @Override

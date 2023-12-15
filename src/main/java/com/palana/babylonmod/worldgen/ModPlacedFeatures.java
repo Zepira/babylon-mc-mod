@@ -24,14 +24,15 @@ import java.util.List;
 
 public class ModPlacedFeatures {
         public static final ResourceKey<PlacedFeature> PALM_PLACED_KEY = registerKey("palm_placed");
-        public static final ResourceKey<PlacedFeature> DYNAMIC_SAND_PLACED_KEY = registerKey("dynamic_sand_placed");
+        // public static final ResourceKey<PlacedFeature> DYNAMIC_SAND_PLACED_KEY =
+        // registerKey("dynamic_sand_placed");
 
         public static void bootstrap(BootstapContext<PlacedFeature> context) {
                 HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context
                                 .lookup(Registries.CONFIGURED_FEATURE);
 
                 register(context, PALM_PLACED_KEY,
-                                configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY),
+                                configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_KEY_MEDIUM),
                                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                                                 ModBlocks.PALM_SAPLING.get()));
 
@@ -41,11 +42,11 @@ public class ModPlacedFeatures {
                 // HeightRangePlacement.uniform(VerticalAnchor.absolute(-100),
                 // VerticalAnchor.absolute(100))));
 
-                register(context, DYNAMIC_SAND_PLACED_KEY,
-                                configuredFeatures.getOrThrow(ModConfiguredFeatures.DYNAMIC_SAND_KEY),
-                                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(),
-                                                PlacementUtils.HEIGHTMAP,
-                                                BiomeFilter.biome()));
+                // register(context, DYNAMIC_SAND_PLACED_KEY,
+                // configuredFeatures.getOrThrow(ModConfiguredFeatures.DYNAMIC_SAND_KEY),
+                // List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(),
+                // PlacementUtils.HEIGHTMAP,
+                // BiomeFilter.biome()));
 
         }
 

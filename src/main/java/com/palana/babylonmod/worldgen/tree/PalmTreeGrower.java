@@ -21,13 +21,32 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
+import com.palana.babylonmod.block.custom.SizeType;
 import com.palana.babylonmod.worldgen.ModConfiguredFeatures;
 
 public class PalmTreeGrower extends AbstractTreeGrower {
+
+    private SizeType size;
+
+    public PalmTreeGrower(BlockPos pPos, BlockState pState, SizeType size) {
+        super();
+        this.size = size;
+    }
+
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
-        return ModConfiguredFeatures.PALM_KEY;
-    }
 
+        switch (this.size) {
+            case LARGE:
+                return ModConfiguredFeatures.PALM_KEY_LARGE;
+            case SMALL:
+                return ModConfiguredFeatures.PALM_KEY_SMALL;
+            case MEDIUM:
+                return ModConfiguredFeatures.PALM_KEY_MEDIUM;
+            default:
+                return ModConfiguredFeatures.PALM_KEY_MEDIUM;
+        }
+
+    }
 }

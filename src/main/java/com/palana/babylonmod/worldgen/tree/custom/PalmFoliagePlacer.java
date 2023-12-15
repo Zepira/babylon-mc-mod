@@ -11,6 +11,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.palana.babylonmod.block.ModBlocks;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
+import com.palana.babylonmod.block.custom.SizeType;
 import com.palana.babylonmod.worldgen.tree.ModFoliagePlacerTypes;
 
 import net.minecraft.core.BlockPos;
@@ -24,6 +25,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
@@ -35,18 +37,31 @@ public class PalmFoliagePlacer extends FoliagePlacer {
     public static final Codec<PalmFoliagePlacer> FOLIAGE_CODEC = RecordCodecBuilder
             .create((instance) -> foliagePlacerParts(instance)
                     .and(Codec.intRange(0, 16).fieldOf("height").forGetter(fp -> fp.height))
+                    .and(Codec.intRange(0, 16).fieldOf("size").forGetter(fp -> fp.size))
                     .apply(instance, PalmFoliagePlacer::new));
     protected final int height;
+    protected final int size;
 
-    public PalmFoliagePlacer(IntProvider pRadius, IntProvider pOffset, int height) {
+    public PalmFoliagePlacer(IntProvider pRadius, IntProvider pOffset, int height, int size) {
         super(pRadius, pOffset);
         this.height = height;
+        this.size = size;
     }
 
     @Override
     protected FoliagePlacerType<?> type() {
         return ModFoliagePlacerTypes.PALM_FOLIAGE_PLACER.get();
     }
+
+    // protected void createCustomFoliage(LevelSimulatedReader pLevel, FoliageSetter
+    // foliageSetter, RandomSource pRandom,
+    // TreeConfiguration pConfig, int maxFreeTreeHeight,
+    // FoliagePlacer.FoliageAttachment attachment, int foliageHeight, int
+    // foliageRadius, int offset) {
+
+    // createFoliage(pLevel, foliageSetter, pRandom, pConfig, offset, attachment,
+    // offset, offset);
+    // }
 
     @Override
     protected void createFoliage(LevelSimulatedReader pLevel, FoliageSetter foliageSetter, RandomSource pRandom,
@@ -61,16 +76,18 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         // attachment.pos().above(0), 2, i + 1,
         // attachment.doubleTrunk());
         // }
-        TreeConfiguration topBlockTreeConfiguration = new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
-                new PalmTrunkPlacer(4, 3, 2),
-                BlockStateProvider.simple(ModBlocks.PALM_TOP.get()),
-                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
-                new TwoLayersFeatureSize(1, 0, 2)).build();
+        // TreeConfiguration topBlockTreeConfiguration = new
+        // TreeConfiguration.TreeConfigurationBuilder(
+        // BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
+        // new PalmTrunkPlacer(4, 3, 2),
+        // BlockStateProvider.simple(ModBlocks.PALM_TOP.get()),
+        // new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
+        // new TwoLayersFeatureSize(1, 0, 2)).build();
 
-        System.out.println("HELLOE!");
-        BlockState baseBlockstate = topBlockTreeConfiguration.foliageProvider.getState(pRandom,
-                attachment.pos());
+        // System.out.println("HELLOE!" + this.size);
+        // BlockState baseBlockstate =
+        // topBlockTreeConfiguration.foliageProvider.getState(pRandom,
+        // attachment.pos());
         BlockState blockstate = pConfig.foliageProvider.getState(pRandom,
                 attachment.pos());
 
@@ -79,14 +96,28 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         // blockstate = DirectionalPalmLeaves.rotate(blockstate, Direction.WEST);
 
         // top block (no facing)
-        foliageSetter.set(attachment.pos(), baseBlockstate);
+        // foliageSetter.set(attachment.pos(), baseBlockstate);
 
         DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
-        BooleanProperty IS_CORNER = BlockStateProperties.CRACKED;
+        EnumProperty<SizeType> SIZE = EnumProperty.create("size", SizeType.class);
+
+        switch (this.size) {
+            case 0:
+                blockstate = blockstate.setValue(SIZE, SizeType.SMALL);
+                break;
+            case 1:
+                blockstate = blockstate.setValue(SIZE, SizeType.MEDIUM);
+                break;
+            case 2:
+                blockstate = blockstate.setValue(SIZE, SizeType.LARGE);
+                break;
+            default:
+                blockstate = blockstate.setValue(SIZE, SizeType.MEDIUM);
+                break;
+        }
 
         blockstate = blockstate.setValue(FACING, Direction.EAST);
         foliageSetter.set(attachment.pos().east(1), blockstate);
-        blockstate = blockstate.setValue(IS_CORNER, Boolean.valueOf(true));
         // foliageSetter.set(attachment.pos().east(1).north(1), blockstate);
 
         blockstate = blockstate.setValue(FACING, Direction.WEST);
