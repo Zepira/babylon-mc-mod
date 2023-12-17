@@ -4,7 +4,7 @@
   "flip_v": true,
   "ambientocclusion": false,
   "render_type": "translucent",
-  "model": "babylonmod:models/block/nature/palm_leaves_small.obj",
+  "model": "babylonmod:models/block/nature/palmleaves/palm_leaves_small.obj",
   "textures": {
     "particle": "minecraft:block/oak_leaves"
   }
