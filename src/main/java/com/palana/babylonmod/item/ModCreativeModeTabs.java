@@ -33,6 +33,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BOTTOM_CORNER_SHADOW.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_CORNER.get());
+                        output.accept(ModBlocks.SANDSTONE_EXTENDED_FULL_BLOCK.get());
 
                         output.accept(ModBlocks.CHISELED_SANDSTONE_STEPPED_BLOCK_BOTTOM.get());
                         output.accept(ModBlocks.CHISELED_SANDSTONE_STEPPED_BOTTOM_CORNER.get());
@@ -49,7 +50,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LAPIS_BANDED_EXTENDED_BLOCK_CORNER.get());
 
                         output.accept(ModBlocks.SANDSTONE_DIAGONAL_WALL.get());
+                        output.accept(ModBlocks.SANDSTONE_DIAGONAL_WALL_SHADOWED.get());
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_DIAGONAL.get());
+                        output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_DIAGONAL_SHADOWED.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_DIAGONAL.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK_DIAGONAL.get());
                         output.accept(ModBlocks.EXTENDED_CORNER.get());
@@ -62,6 +65,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_WINDOW_RECTANGLE_STEPPED.get());
 
                         output.accept(ModBlocks.POLISHED_SANDSTONE_FENCE.get());
+                        output.accept(ModBlocks.POLISHED_SANDSTONE_FENCE_SHORT.get());
 
                         output.accept(ModBlocks.SANDSTONE_INSET_WINDOW.get());
                         output.accept(ModBlocks.SANDSTONE_SINGLE_ARCH.get());
@@ -101,6 +105,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ISHTAR_GATE_AUROCH_WHITE_RIGHT.get());
                         output.accept(ModBlocks.ISHTAR_GATE_DRAGON_GOLD_RIGHT.get());
                         output.accept(ModBlocks.ISHTAR_GATE_DRAGON_WHITE_RIGHT.get());
+
+                        output.accept(ModBlocks.PALM_SAPLING_SMALL.get());
+                        output.accept(ModBlocks.PALM_SAPLING.get());
+                        output.accept(ModBlocks.PALM_SAPLING_LARGE.get());
 
                     }).build());
 
@@ -170,9 +178,8 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.POLISHED_DEEPSLATE_STAIRS);
                         output.accept(Blocks.CHERRY_STAIRS);
                         output.accept(Blocks.CHERRY_SLAB);
-                        output.accept(ModBlocks.PALM_SAPLING_SMALL.get());
-                        output.accept(ModBlocks.PALM_SAPLING_LARGE.get());
-                        output.accept(ModBlocks.PALM_TRUNK.get());
+                    
+                     
 
                     }).build());
 
@@ -182,7 +189,8 @@ public class ModCreativeModeTabs {
                     .displayItems((displayParameters, output) -> {
 
                         output.accept(ModBlocks.DYNAMIC_SAND.get());
-                        output.accept(ModBlocks.PALM_SAPLING.get());
+                      
+                           output.accept(ModBlocks.PALM_TRUNK.get());
 
                         // output.accept(ModBlocks.CUSTOM_SANDSTONE.get());
 

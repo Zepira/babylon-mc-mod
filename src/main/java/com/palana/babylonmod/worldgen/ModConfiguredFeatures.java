@@ -63,24 +63,24 @@ public class ModConfiguredFeatures {
                 // pHeightRandB = maxHeight
                 register(context, PALM_KEY_SMALL, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                                 BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
-                                new PalmTrunkPlacer(1, 2, 5),
+                                new PalmTrunkPlacer(1, 5, 6),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
-                                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 0),
-                                new TwoLayersFeatureSize(1, 0, 2)).build());
+                                new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 1),
+                                new TwoLayersFeatureSize(0,0,0)).build());
 
                 register(context, PALM_KEY_MEDIUM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                                 BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
-                                new PalmTrunkPlacer(1, 5, 8),
+                                new PalmTrunkPlacer(1, 7, 8),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 1),
-                                new TwoLayersFeatureSize(1, 0, 2)).build());
+                                new TwoLayersFeatureSize(0,0,0)).build());
 
                 register(context, PALM_KEY_LARGE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                                 BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
-                                new PalmTrunkPlacer(1, 8, 10),
+                                new PalmTrunkPlacer(1, 9, 10),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 2),
-                                new TwoLayersFeatureSize(1, 0, 2)).build());
+                                new TwoLayersFeatureSize(0,0,0)).build());
 
                 // register(context, DYNAMIC_SAND_KEY, Feature.ORE, new
                 // OreConfiguration(dynamicSandBlocks, 100));

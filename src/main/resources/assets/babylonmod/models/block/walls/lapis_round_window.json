@@ -1,8 +1,6 @@
 {
   "credit": "Made with Blockbench",
   "parent": "minecraft:block/stairs",
-  "ambientocclusion": true,
-  "render_type": "translucent",
   "textures": {
     "0": "babylonmod:block/lapis_brick",
     "1": "babylonmod:block/lapis_dark",

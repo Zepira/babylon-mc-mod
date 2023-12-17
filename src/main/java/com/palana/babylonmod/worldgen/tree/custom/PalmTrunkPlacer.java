@@ -67,11 +67,11 @@ public class PalmTrunkPlacer extends TrunkPlacer {
             // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
             // pBlockSetter.accept(pPos, blockstate.setValue(SIZE, SizeType.MEDIUM));
             // blockstate.setValue(SIZE, SizeType.MEDIUM);
-            if (pFreeTreeHeight < 7) {
-                pBlockSetter.accept(pPos.above(i), blockstate.setValue(SIZE, SizeType.SMALL));
-            } else {
+            // if (height < 6) {
+            //     pBlockSetter.accept(pPos.above(i), blockstate.setValue(SIZE, SizeType.SMALL));
+            // } else {
                 pBlockSetter.accept(pPos.above(i), blockstate.setValue(SIZE, SizeType.MEDIUM));
-            }
+           // }
 
             // placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
 
