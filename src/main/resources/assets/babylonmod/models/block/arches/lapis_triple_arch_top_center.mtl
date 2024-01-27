@@ -1,6 +1,5 @@
-# Made in Blockbench 4.8.3
-newmtl m_de9865ab-6d30-42b3-04cc-a9cf4ff6c63c
-map_Kd babylonmod:block/lapis_brick_match_sandstone 
-newmtl m_b063e3bf-c055-a9e6-230c-b5633c09d76d
-map_Kd babylonmod:block/lapis_brick_match_sandstone 
-newmtl none
+# Blender 3.6.1 MTL File: 'Three Arch.blend'
+# www.blender.org
+
+newmtl Lapis_Main
+map_Kd babylonmod:block/lapis_main

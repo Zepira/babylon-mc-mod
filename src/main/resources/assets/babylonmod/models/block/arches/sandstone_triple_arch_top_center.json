@@ -1,7 +1,8 @@
 {
   "__comment": "Add the following line on the same level as a 'model' declaration.",
   "loader": "forge:obj",
-  "ambientocclusion": false,
+  "flip_v": true,
+  "ambientocclusion": true,
   "render_type": "translucent",
   "model": "babylonmod:models/block/arches/sandstone_triple_arch_top_center.obj",
   "textures": {
