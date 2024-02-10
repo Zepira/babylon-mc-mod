@@ -440,6 +440,29 @@ public class ModBlocks {
                         () -> new ModSaplingBlock(new PalmTreeGrower(null, null, SizeType.SMALL),
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+        public static final RegistryObject<Block> SANDSTONE_BRIDGE_BACK_RIGHT = registerBlock(
+                        "sandstone_bridge_back_right",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SANDSTONE_BRIDGE_BACK_LEFT = registerBlock(
+                        "sandstone_bridge_back_left",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_CENTER = registerBlock(
+                        "sandstone_bridge_front_center",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_RIGHT = registerBlock(
+                        "sandstone_bridge_front_right",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_LEFT = registerBlock(
+                        "sandstone_bridge_front_left",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);

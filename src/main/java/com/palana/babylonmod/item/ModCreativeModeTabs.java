@@ -110,6 +110,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PALM_SAPLING.get());
                         output.accept(ModBlocks.PALM_SAPLING_LARGE.get());
 
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_LEFT.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_RIGHT.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_CENTER.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MC_BABYLON_TAB = CREATIVE_MODE_TABS.register("mc_babylon_tab",
