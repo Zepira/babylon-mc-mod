@@ -97,7 +97,8 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
-        public static final RegistryObject<Block> SANDSTONE_STEPPED_PEAK_CORNER = registerBlock("sandstone_stepped_peak_corner",
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_PEAK_CORNER = registerBlock(
+                        "sandstone_stepped_peak_corner",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
@@ -109,7 +110,8 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
-        public static final RegistryObject<Block> SANDSTONE_SINGLE_ARCH_STEPPED = registerBlock("sandstone_single_arch_stepped",
+        public static final RegistryObject<Block> SANDSTONE_SINGLE_ARCH_STEPPED = registerBlock(
+                        "sandstone_single_arch_stepped",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
@@ -219,12 +221,12 @@ public class ModBlocks {
                         "sandstone_cover",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-        
-                                        public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM_TOP = registerBlock(
+
+        public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM_TOP = registerBlock(
                         "sandstone_stepped_block_bottom_top",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
-        
+
         public static final RegistryObject<Block> SANDSTONE_STEPPED_BLOCK_BOTTOM = registerBlock(
                         "sandstone_stepped_block_bottom",
                         () -> new ModDirectionalBlock(
@@ -338,15 +340,18 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_BOTTOM = registerBlock(
                         "sandstone_diagonal_wall_muddy_bottom",
-                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_TOP = registerBlock(
                         "sandstone_diagonal_wall_muddy_top",
-                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_SHADOWED = registerBlock(
-                                "sandstone_diagonal_wall_shadowed",
-                                () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+                        "sandstone_diagonal_wall_shadowed",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_DIAGONAL = registerBlock("sandstone_peak_diagonal",
                         () -> new ModDirectionalBlock(
@@ -356,8 +361,8 @@ public class ModBlocks {
                         () -> new ModGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
 
         public static final RegistryObject<Block> SANDY_STONES = registerBlock("sandy_stones",
-                                                () -> new ModDirectionalBlock(
-                                                        BlockBehaviour.Properties.copy(Blocks.SAND).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SAND).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER_DIAGONAL = registerBlock(
                         "sandstone_peak_corner_diagonal",
@@ -425,19 +430,19 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
         public static final RegistryObject<Block> POLISHED_SANDSTONE_FENCE_SMALL = registerBlock(
-                                                                "polished_sandstone_fence_small",
-                                                                () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
-                                                                                BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+                        "polished_sandstone_fence_small",
+                        () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
         public static final RegistryObject<Block> POLISHED_SANDSTONE_FENCE_SHORT = registerBlock(
                         "polished_sandstone_fence_short",
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
-                                        
+
         public static final RegistryObject<Block> POLISHED_SANDSTONE_FENCE_SHORT_SMALL = registerBlock(
-                                                                "polished_sandstone_fence_short_small",
-                                                                () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
-                                                                                BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+                        "polished_sandstone_fence_short_small",
+                        () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
         public static final RegistryObject<Block> DYNAMIC_SAND = registerBlock(
                         "dynamic_sand",
@@ -544,54 +549,59 @@ public class ModBlocks {
                         "market_roof_slanted",
                         () -> new ModDirectionalSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_BACK_RIGHT_MUDDY_BOTTOM = registerBlock(
-                                                                "sandstone_bridge_back_right_muddy_bottom",
-                                                                () -> new ModDirectionalBlock(
-                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                        
+                        "sandstone_bridge_back_right_muddy_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_BACK_LEFT_MUDDY_BOTTOM = registerBlock(
-                                                                "sandstone_bridge_back_left_muddy_bottom",
-                                                                () -> new ModDirectionalBlock(
-                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                        
+                        "sandstone_bridge_back_left_muddy_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_CENTER_MUDDY_BOTTOM = registerBlock(
-                                                                "sandstone_bridge_front_center_muddy_bottom",
-                                                                () -> new ModDirectionalBlock(
-                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                        
+                        "sandstone_bridge_front_center_muddy_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_RIGHT_MUDDY_BOTTOM = registerBlock(
-                                                                "sandstone_bridge_front_right_muddy_bottom",
-                                                                () -> new ModDirectionalBlock(
-                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                        
+                        "sandstone_bridge_front_right_muddy_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_LEFT_MUDDY_BOTTOM = registerBlock(
-                                                                "sandstone_bridge_front_left_muddy_bottom",
-                                                                () -> new ModDirectionalBlock(
-                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+                        "sandstone_bridge_front_left_muddy_bottom",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_BACK_RIGHT_MUDDY_TOP = registerBlock(
-                                                                                                                                                "sandstone_bridge_back_right_muddy_top",
-                                                                                                                                                () -> new ModDirectionalBlock(
-                                                                                                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                                                                                                        
+                        "sandstone_bridge_back_right_muddy_top",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_BACK_LEFT_MUDDY_TOP = registerBlock(
-                                                                                                                                                "sandstone_bridge_back_left_muddy_top",
-                                                                                                                                                () -> new ModDirectionalBlock(
-                                                                                                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                                                                                                        
+                        "sandstone_bridge_back_left_muddy_top",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_CENTER_MUDDY_TOP = registerBlock(
-                                                                                                                                                "sandstone_bridge_front_center_muddy_top",
-                                                                                                                                                () -> new ModDirectionalBlock(
-                                                                                                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                                                                                                        
+                        "sandstone_bridge_front_center_muddy_top",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_RIGHT_MUDDY_TOP = registerBlock(
-                                                                                                                                                "sandstone_bridge_front_right_muddy_top",
-                                                                                                                                                () -> new ModDirectionalBlock(
-                                                                                                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-                                                                                                                        
+                        "sandstone_bridge_front_right_muddy_top",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_BRIDGE_FRONT_LEFT_MUDDY_TOP = registerBlock(
-                                                                                                                                                "sandstone_bridge_front_left_muddy_top",
-                                                                                                                                                () -> new ModDirectionalBlock(
-                                                                                                                                                                BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+                        "sandstone_bridge_front_left_muddy_top",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> LAMASSU = registerBlock(
+                        "lamassu",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

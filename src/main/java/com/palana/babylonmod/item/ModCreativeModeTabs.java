@@ -131,21 +131,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT.get());
                         output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT.get());
                         output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_LEFT.get());
-                                                output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_RIGHT_MUDDY_BOTTOM.get());
-                                                output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_CENTER_MUDDY_BOTTOM.get());
-                                                output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT_MUDDY_BOTTOM.get());
-                                                output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT_MUDDY_BOTTOM.get());
-                                                output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_LEFT_MUDDY_BOTTOM.get());
-                                                                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_RIGHT_MUDDY_TOP.get());
-                                                                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_CENTER_MUDDY_TOP.get());
-                                                                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT_MUDDY_TOP.get());
-                                                                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT_MUDDY_TOP.get());
-                                                                                                                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_LEFT_MUDDY_TOP.get());
-                                                                        
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_RIGHT_MUDDY_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_CENTER_MUDDY_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT_MUDDY_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT_MUDDY_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_LEFT_MUDDY_BOTTOM.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_RIGHT_MUDDY_TOP.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_CENTER_MUDDY_TOP.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT_MUDDY_TOP.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT_MUDDY_TOP.get());
+                        output.accept(ModBlocks.SANDSTONE_BRIDGE_BACK_LEFT_MUDDY_TOP.get());
 
                         output.accept(ModBlocks.MARKET_STALL.get());
                         output.accept(ModBlocks.OFFSET_FENCE_POST.get());
                         output.accept(ModBlocks.MARKET_ROOF_SLANTED.get());
+
+                        // output.accept(ModBlocks.LAMASSU.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MC_BABYLON_TAB = CREATIVE_MODE_TABS.register("mc_babylon_tab",
@@ -227,9 +229,6 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.SAND);
                         output.accept(ModBlocks.OAK_LOG_TWO.get());
 
-                    
-                     
-
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> DEV_TAB = CREATIVE_MODE_TABS.register("dev_tab",
@@ -238,8 +237,8 @@ public class ModCreativeModeTabs {
                     .displayItems((displayParameters, output) -> {
 
                         output.accept(ModBlocks.DYNAMIC_SAND.get());
-                      
-                           output.accept(ModBlocks.PALM_TRUNK.get());
+
+                        output.accept(ModBlocks.PALM_TRUNK.get());
 
                         // output.accept(ModBlocks.CUSTOM_SANDSTONE.get());
 
