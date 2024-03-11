@@ -145,8 +145,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARKET_STALL.get());
                         output.accept(ModBlocks.OFFSET_FENCE_POST.get());
                         output.accept(ModBlocks.MARKET_ROOF_SLANTED.get());
-
-                        // output.accept(ModBlocks.LAMASSU.get());
+                                                                        
 
                     }).build());
 
@@ -228,6 +227,9 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.BIRCH_FENCE);
                         output.accept(Blocks.SAND);
                         output.accept(ModBlocks.OAK_LOG_TWO.get());
+
+                    
+                     
 
                     }).build());
 

@@ -338,15 +338,15 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
-        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_BOTTOM = registerBlock(
-                        "sandstone_diagonal_wall_muddy_bottom",
-                        () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_TOP = registerBlock(
                         "sandstone_diagonal_wall_muddy_top",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_BOTTOM = registerBlock(
+                        "sandstone_diagonal_wall_muddy_bottom",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_SHADOWED = registerBlock(
                         "sandstone_diagonal_wall_shadowed",
@@ -438,6 +438,7 @@ public class ModBlocks {
                         "polished_sandstone_fence_short",
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+
 
         public static final RegistryObject<Block> POLISHED_SANDSTONE_FENCE_SHORT_SMALL = registerBlock(
                         "polished_sandstone_fence_short_small",
