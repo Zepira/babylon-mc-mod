@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/cube_all",
-	"waterlogged": false,
+	"waterlogged": true,
 	"ambientocclusion": false,
 	"render_type": "translucent",
 	"textures": {

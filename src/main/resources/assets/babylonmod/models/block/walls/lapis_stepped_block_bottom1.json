@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"0": "babylonmod:block/lapis_main",
+		"0": "babylonmod:block/lapis_main1",
 		"1": "babylonmod:block/sandstone_mid_dark",
 		"particle": "babylonmod:block/lapis_main"
 	},
