@@ -21,7 +21,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
-import com.palana.babylonmod.block.custom.SizeType;
+import com.palana.babylonmod.block.custom.types.SizeType;
 import com.palana.babylonmod.worldgen.ModConfiguredFeatures;
 
 public class PalmTreeGrower extends AbstractTreeGrower {

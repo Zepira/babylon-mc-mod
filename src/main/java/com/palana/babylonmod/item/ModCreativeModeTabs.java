@@ -116,6 +116,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_RIGHT.get());
                         output.accept(ModBlocks.SANDSTONE_BRIDGE_FRONT_LEFT.get());
 
+                        output.accept(ModBlocks.MARKET_STALL.get());
+                        output.accept(ModBlocks.OFFSET_FENCE_POST.get());
+                        output.accept(ModBlocks.MARKET_ROOF_SLANTED.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MC_BABYLON_TAB = CREATIVE_MODE_TABS.register("mc_babylon_tab",

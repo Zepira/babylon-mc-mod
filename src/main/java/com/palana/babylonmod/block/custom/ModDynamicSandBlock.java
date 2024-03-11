@@ -37,6 +37,8 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.ApiStatus.OverrideOnly;
 
+import com.palana.babylonmod.block.custom.types.SandType;
+
 public class ModDynamicSandBlock extends Block {
     public static EnumProperty<SandType> SAND_TYPE = EnumProperty.create("sand_type", SandType.class);
 

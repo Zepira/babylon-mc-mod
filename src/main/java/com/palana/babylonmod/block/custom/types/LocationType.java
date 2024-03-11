@@ -1,16 +1,15 @@
-package com.palana.babylonmod.block.custom;
+package com.palana.babylonmod.block.custom.types;
 
 import net.minecraft.util.StringRepresentable;
 
-public enum SizeType implements StringRepresentable {
-    SMALL("small"),
-    MEDIUM("medium"),
-    LARGE("large"),
-    EXTRA_LARGE("extra_large");
+public enum LocationType implements StringRepresentable {
+    MIDDLE("middle"),
+    LEFT("left"),
+    RIGHT("right");
 
     private final String name;
 
-    private SizeType(String pName) {
+    private LocationType(String pName) {
         this.name = pName;
     }
 
@@ -21,5 +20,4 @@ public enum SizeType implements StringRepresentable {
     public String getSerializedName() {
         return this.name;
     }
-
 }

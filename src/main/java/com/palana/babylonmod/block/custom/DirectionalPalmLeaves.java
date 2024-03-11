@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.core.Direction;
 import org.jetbrains.annotations.Nullable;
 
+import com.palana.babylonmod.block.custom.types.SizeType;
+
 public class DirectionalPalmLeaves extends Block {
     public static DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     // public static BooleanProperty IS_CORNER = BlockStateProperties.CRACKED;

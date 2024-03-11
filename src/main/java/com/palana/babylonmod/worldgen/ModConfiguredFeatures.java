@@ -10,7 +10,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.ModBlocks;
-import com.palana.babylonmod.block.custom.SizeType;
+import com.palana.babylonmod.block.custom.types.SizeType;
 import com.palana.babylonmod.worldgen.tree.custom.PalmFoliagePlacer;
 import com.palana.babylonmod.worldgen.tree.custom.PalmTrunkPlacer;
 
@@ -29,6 +29,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConf
 import net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -66,21 +67,21 @@ public class ModConfiguredFeatures {
                                 new PalmTrunkPlacer(1, 5, 6),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 1),
-                                new TwoLayersFeatureSize(0,0,0)).build());
+                                new TwoLayersFeatureSize(0, 0, 0)).build());
 
                 register(context, PALM_KEY_MEDIUM, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                                 BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
                                 new PalmTrunkPlacer(1, 7, 8),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 1),
-                                new TwoLayersFeatureSize(0,0,0)).build());
+                                new TwoLayersFeatureSize(0, 0, 0)).build());
 
                 register(context, PALM_KEY_LARGE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                                 BlockStateProvider.simple(ModBlocks.PALM_TRUNK.get()),
                                 new PalmTrunkPlacer(1, 9, 10),
                                 BlockStateProvider.simple(ModBlocks.PALM_LEAVES.get()),
                                 new PalmFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3, 2),
-                                new TwoLayersFeatureSize(0,0,0)).build());
+                                new TwoLayersFeatureSize(0, 0, 0)).build());
 
                 // register(context, DYNAMIC_SAND_KEY, Feature.ORE, new
                 // OreConfiguration(dynamicSandBlocks, 100));

@@ -3,7 +3,7 @@ package com.palana.babylonmod.worldgen.tree.custom;
 import com.google.common.collect.ImmutableList;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import com.palana.babylonmod.block.custom.SizeType;
+import com.palana.babylonmod.block.custom.types.SizeType;
 import com.palana.babylonmod.worldgen.tree.ModTrunkPlacerTypes;
 
 import net.minecraft.core.BlockPos;

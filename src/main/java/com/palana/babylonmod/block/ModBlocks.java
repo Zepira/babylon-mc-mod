@@ -2,16 +2,17 @@ package com.palana.babylonmod.block;
 
 import com.palana.babylonmod.BabylonMod;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
+import com.palana.babylonmod.block.custom.ModConnectedBlock;
 import com.palana.babylonmod.block.custom.ModDynamicSandBlock;
 import com.palana.babylonmod.block.custom.ModDirectionalBlock;
+import com.palana.babylonmod.block.custom.ModDirectionalSlabBlock;
 import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
 import com.palana.babylonmod.block.custom.ModGrassBlock;
 import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.block.custom.ModScalableBlock;
-import com.palana.babylonmod.block.custom.SandType;
-import com.palana.babylonmod.block.custom.SizeType;
+import com.palana.babylonmod.block.custom.types.SizeType;
 import com.palana.babylonmod.item.ModItems;
 import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
 import net.minecraft.core.BlockPos;
@@ -69,7 +70,8 @@ public class ModBlocks {
 
         // Straight tower shit
         public static final RegistryObject<Block> SANDSTONE_PEAK = registerBlock("sandstone_peak",
-                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
         public static final RegistryObject<Block> LAPIS_PEAK = registerBlock("lapis_peak",
                         () -> new ModDirectionalBlock(
@@ -269,8 +271,8 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> SANDSTONE_EXTENDED_BLOCK_CORNER = registerBlock(
                         "sandstone_extended_block_corner",
-                        () -> new ModDirectionalBlock( BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
-
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> EXTENDED_CORNER = registerBlock(
                         "extended_corner",
@@ -290,11 +292,12 @@ public class ModBlocks {
         // Diagonal tower shit
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL = registerBlock(
                         "sandstone_diagonal_wall",
-                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_SHADOWED = registerBlock(
-                                "sandstone_diagonal_wall_shadowed",
-                                () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+                        "sandstone_diagonal_wall_shadowed",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_DIAGONAL = registerBlock("sandstone_peak_diagonal",
                         () -> new ModDirectionalBlock(
@@ -465,6 +468,18 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+        public static final RegistryObject<Block> MARKET_STALL = registerBlock(
+                        "market_stall",
+                        () -> new ModConnectedBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> OFFSET_FENCE_POST = registerBlock(
+                        "offset_fence_post",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> MARKET_ROOF_SLANTED = registerBlock(
+                        "market_roof_slanted",
+                        () -> new ModDirectionalSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);

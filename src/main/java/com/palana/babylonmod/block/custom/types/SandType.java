@@ -1,4 +1,4 @@
-package com.palana.babylonmod.block.custom;
+package com.palana.babylonmod.block.custom.types;
 
 import net.minecraft.util.StringRepresentable;
 

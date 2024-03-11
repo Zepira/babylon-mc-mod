@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import org.jetbrains.annotations.Nullable;
 
+import com.palana.babylonmod.block.custom.types.SizeType;
+
 public class ModScalableBlock extends DirectionalBlock {
     public static EnumProperty<SizeType> SIZE = EnumProperty.create("size", SizeType.class);
 

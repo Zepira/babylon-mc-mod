@@ -11,7 +11,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.palana.babylonmod.block.ModBlocks;
 import com.palana.babylonmod.block.custom.DirectionalPalmLeaves;
-import com.palana.babylonmod.block.custom.SizeType;
+import com.palana.babylonmod.block.custom.types.SizeType;
 import com.palana.babylonmod.worldgen.tree.ModFoliagePlacerTypes;
 
 import net.minecraft.core.BlockPos;
