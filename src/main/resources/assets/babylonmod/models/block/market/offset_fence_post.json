@@ -2,8 +2,8 @@
   "credit": "Made with Blockbench",
   "texture_size": [32, 32],
   "textures": {
-    "2": "minecraft:block/acacia_fence",
-    "particle": "minecraft:block/acacia_fence"
+    "2": "minecraft:block/birch_fence",
+    "particle": "minecraft:block/birch_fence"
   },
   "elements": [
     {

@@ -620,6 +620,16 @@ public class ModBlocks {
                         "market_table_single",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+        public static final RegistryObject<Block> MARKET_TRAY_EMPTY = registerBlock(
+                        "market_tray_empty",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> MARKET_TRAY_FILLED = registerBlock(
+                        "market_tray_filled",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);

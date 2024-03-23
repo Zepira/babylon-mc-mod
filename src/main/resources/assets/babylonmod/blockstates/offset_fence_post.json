@@ -9,11 +9,11 @@
       "y": 90
     },
     "facing=north": {
-      "model": "babylonmod:block/market/offset_fence_post"
-    },
-    "facing=south": {
       "model": "babylonmod:block/market/offset_fence_post",
       "y": 180
+    },
+    "facing=south": {
+      "model": "babylonmod:block/market/offset_fence_post"
     }
   }
 }

@@ -238,6 +238,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARKET_TABLE_SINGLE.get());
                         output.accept(ModBlocks.SMALL_BARREL.get());
                         output.accept(ModBlocks.LARGE_BARREL.get());
+                        output.accept(ModBlocks.MARKET_TRAY_EMPTY.get());
+                        output.accept(ModBlocks.MARKET_TRAY_FILLED.get());
 
                     }).build());
 
