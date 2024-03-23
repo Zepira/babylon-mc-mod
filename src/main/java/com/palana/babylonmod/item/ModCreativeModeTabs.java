@@ -145,7 +145,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARKET_STALL.get());
                         output.accept(ModBlocks.OFFSET_FENCE_POST.get());
                         output.accept(ModBlocks.MARKET_ROOF_SLANTED.get());
-                                                                        
 
                     }).build());
 
@@ -228,8 +227,17 @@ public class ModCreativeModeTabs {
                         output.accept(Blocks.SAND);
                         output.accept(ModBlocks.OAK_LOG_TWO.get());
 
-                    
-                     
+                    }).build());
+
+    public static final RegistryObject<CreativeModeTab> ITEMS = CREATIVE_MODE_TABS.register("items",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.SMALL_BARREL.get()))
+                    .title(Component.translatable("creativetab.items"))
+                    .displayItems((displayParameters, output) -> {
+
+                        output.accept(ModBlocks.MARKET_TABLE.get());
+                        output.accept(ModBlocks.MARKET_TABLE_SINGLE.get());
+                        output.accept(ModBlocks.SMALL_BARREL.get());
+                        output.accept(ModBlocks.LARGE_BARREL.get());
 
                     }).build());
 

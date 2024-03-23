@@ -338,7 +338,6 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
-
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_TOP = registerBlock(
                         "sandstone_diagonal_wall_muddy_top",
                         () -> new ModDirectionalBlock(
@@ -346,7 +345,8 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_MUDDY_BOTTOM = registerBlock(
                         "sandstone_diagonal_wall_muddy_bottom",
-                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_DIAGONAL_WALL_SHADOWED = registerBlock(
                         "sandstone_diagonal_wall_shadowed",
@@ -438,7 +438,6 @@ public class ModBlocks {
                         "polished_sandstone_fence_short",
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
-
 
         public static final RegistryObject<Block> POLISHED_SANDSTONE_FENCE_SHORT_SMALL = registerBlock(
                         "polished_sandstone_fence_short_small",
@@ -603,6 +602,23 @@ public class ModBlocks {
                         "lamassu",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SMALL_BARREL = registerBlock(
+                        "small_barrel",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> LARGE_BARREL = registerBlock(
+                        "large_barrel",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> MARKET_TABLE = registerBlock(
+                        "market_table",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> MARKET_TABLE_SINGLE = registerBlock(
+                        "market_table_single",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
