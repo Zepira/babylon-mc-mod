@@ -10,6 +10,7 @@ import com.palana.babylonmod.block.custom.ModFlammableRotatedPillarBlock;
 import com.palana.babylonmod.block.custom.ModGrassBlock;
 import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
+import com.palana.babylonmod.block.custom.ModProcessionalBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.block.custom.ModScalableBlock;
 import com.palana.babylonmod.block.custom.types.SizeType;
@@ -625,11 +626,40 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
-        public static final RegistryObject<Block> MARKET_TRAY_FILLED = registerBlock(
-                        "market_tray_filled",
+        public static final RegistryObject<Block> MARKET_TRAY_FILLED_BERRIES = registerBlock(
+                        "market_tray_filled_berries",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
+        public static final RegistryObject<Block> MARKET_TRAY_FILLED_GRAPES = registerBlock(
+                        "market_tray_filled_grapes",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> MARKET_TRAY_FILLED_DATES = registerBlock(
+                        "market_tray_filled_dates",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> BLUE_LEFT = registerBlock(
+                        "blue_left",
+                        () -> new ModProcessionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> BLUE_RIGHT = registerBlock(
+                        "blue_right",
+                        () -> new ModProcessionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> CYAN_LEFT = registerBlock(
+                        "cyan_left",
+                        () -> new ModProcessionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> CYAN_RIGHT = registerBlock(
+                        "cyan_right",
+                        () -> new ModProcessionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);
