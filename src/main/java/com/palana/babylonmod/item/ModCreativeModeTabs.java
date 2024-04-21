@@ -77,10 +77,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.POLISHED_SANDSTONE_FENCE_SHORT.get());
                         output.accept(ModBlocks.POLISHED_SANDSTONE_FENCE_SHORT_SMALL.get());
 
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_FENCE.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_FENCE_SMALL.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_FENCE_SHORT.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_FENCE_SHORT_SMALL.get());
+
                         output.accept(ModBlocks.SANDSTONE_INSET_WINDOW.get());
                         output.accept(ModBlocks.SANDSTONE_SINGLE_ARCH.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_SINGLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_SINGLE_ARCH_STEPPED.get());
                         output.accept(ModBlocks.SANDSTONE_DOUBLE_ARCH.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_DOUBLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_TRIPLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_TRIPLE_ARCH_CENTER.get());
                         output.accept(ModBlocks.SANDSTONE_FIVE_ARCH_CENTER.get());
@@ -106,6 +113,11 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.GRASS_TWO.get());
                         output.accept(ModBlocks.SANDY_STONES.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_DARK.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_BOTTOM_FADE.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_ROOF.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_RECESS.get());
                         output.accept(ModBlocks.LAPIS_GATE_BORDER_LEFT.get());
                         output.accept(ModBlocks.LAPIS_GATE_BORDER_RIGHT.get());
 
