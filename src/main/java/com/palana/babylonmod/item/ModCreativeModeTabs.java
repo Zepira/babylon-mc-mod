@@ -259,6 +259,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MARKET_TRAY_FILLED_BERRIES.get());
                         output.accept(ModBlocks.MARKET_TRAY_FILLED_GRAPES.get());
                         output.accept(ModBlocks.MARKET_TRAY_FILLED_DATES.get());
+                        output.accept(ModBlocks.SMALL_BLUE_RUG.get());
+                        output.accept(ModBlocks.SMALL_WHITE_RUG.get());
+                        output.accept(ModBlocks.SMALL_TAN_RUG.get());
+                        output.accept(ModBlocks.SMALL_RED_RUG.get());
 
                     }).build());
 

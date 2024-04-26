@@ -11,6 +11,7 @@ import com.palana.babylonmod.block.custom.ModGrassBlock;
 import com.palana.babylonmod.block.custom.ModIshtarGateBlock;
 import com.palana.babylonmod.block.custom.ModPassableStairBlock;
 import com.palana.babylonmod.block.custom.ModProcessionalBlock;
+import com.palana.babylonmod.block.custom.ModRugBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.block.custom.ModScalableBlock;
 import com.palana.babylonmod.block.custom.types.SizeType;
@@ -110,8 +111,9 @@ public class ModBlocks {
         public static final RegistryObject<Block> SANDSTONE_SINGLE_ARCH = registerBlock("sandstone_single_arch",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
-                                        
-        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_SINGLE_ARCH = registerBlock("lime_gypsum_plaster_single_arch",
+
+        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_SINGLE_ARCH = registerBlock(
+                        "lime_gypsum_plaster_single_arch",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
@@ -124,7 +126,8 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
-                                        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_DOUBLE_ARCH = registerBlock("lime_gypsum_plaster_double_arch",
+        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_DOUBLE_ARCH = registerBlock(
+                        "lime_gypsum_plaster_double_arch",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
@@ -374,26 +377,26 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.SAND).noOcclusion()));
 
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER = registerBlock("lime_gypsum_plaster",
-                                        () -> new ModDirectionalBlock(
-                                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_DARK = registerBlock("lime_gypsum_plaster_dark",
-                                                        () -> new ModDirectionalBlock(
-                                                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
-        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_BOTTOM_FADE = registerBlock("lime_gypsum_plaster_bottom_fade",
-                                        () -> new ModDirectionalBlock(
-                                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_BOTTOM_FADE = registerBlock(
+                        "lime_gypsum_plaster_bottom_fade",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_ROOF = registerBlock("lime_gypsum_plaster_roof",
-                                        () -> new ModDirectionalBlock(
-                                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
 
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_RECESS = registerBlock(
-                                                                "lime_gypsum_plaster_recess",
-                                                                () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
-                                                                                BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
-
+                        "lime_gypsum_plaster_recess",
+                        () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER_DIAGONAL = registerBlock(
                         "sandstone_peak_corner_diagonal",
@@ -474,7 +477,6 @@ public class ModBlocks {
                         "polished_sandstone_fence_short_small",
                         () -> new StairBlock(() -> ModBlocks.LAPIS_BRICK.get().defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
-
 
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_FENCE = registerBlock(
                         "lime_gypsum_plaster_fence",
@@ -711,6 +713,27 @@ public class ModBlocks {
                         "cyan_right",
                         () -> new ModProcessionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
+
+        public static final RegistryObject<Block> SMALL_BLUE_RUG = registerBlock(
+                        "small_blue_rug",
+                        () -> new ModRugBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_WOOL).noOcclusion()));
+
+        public static final RegistryObject<Block> SMALL_RED_RUG = registerBlock(
+                        "small_red_rug",
+                        () -> new ModRugBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_WOOL).noOcclusion()));
+
+        public static final RegistryObject<Block> SMALL_WHITE_RUG = registerBlock(
+                        "small_white_rug",
+                        () -> new ModRugBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_WOOL).noOcclusion()));
+
+        public static final RegistryObject<Block> SMALL_TAN_RUG = registerBlock(
+                        "small_tan_rug",
+                        () -> new ModRugBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.RED_WOOL).noOcclusion()));
+
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);
