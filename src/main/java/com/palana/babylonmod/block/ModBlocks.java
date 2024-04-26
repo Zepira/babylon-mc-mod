@@ -744,6 +744,14 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
 
+        public static final RegistryObject<Block> WIDE_VASE = registerBlock(
+                        "wide_vase",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> TALL_VASE = registerBlock(
+                        "tall_vase",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);

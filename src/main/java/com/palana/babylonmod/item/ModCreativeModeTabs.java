@@ -158,6 +158,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.OFFSET_FENCE_POST.get());
                         output.accept(ModBlocks.MARKET_ROOF_SLANTED.get());
 
+                        output.accept(ModBlocks.CYPRESS.get());
+
                         output.accept(ModBlocks.BLUE_LEFT.get());
                         output.accept(ModBlocks.BLUE_RIGHT.get());
                         output.accept(ModBlocks.CYAN_LEFT.get());
@@ -265,6 +267,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMALL_RED_RUG.get());
                         output.accept(ModBlocks.WHEAT_SACK.get());
                         output.accept(ModBlocks.BARLEY_SACK.get());
+                        output.accept(ModBlocks.WIDE_VASE.get());
+                        output.accept(ModBlocks.TALL_VASE.get());
 
                     }).build());
 
