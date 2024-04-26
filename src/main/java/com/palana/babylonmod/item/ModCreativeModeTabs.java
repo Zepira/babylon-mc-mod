@@ -90,6 +90,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LIME_GYPSUM_PLASTER_DOUBLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_TRIPLE_ARCH.get());
                         output.accept(ModBlocks.SANDSTONE_TRIPLE_ARCH_CENTER.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_TRIPLE_ARCH.get());
+                        output.accept(ModBlocks.LIME_GYPSUM_PLASTER_TRIPLE_ARCH_CENTER.get());
                         output.accept(ModBlocks.SANDSTONE_FIVE_ARCH_CENTER.get());
                         output.accept(ModBlocks.SANDSTONE_FIVE_ARCH_TOP.get());
                         output.accept(ModBlocks.SANDSTONE_FIVE_ARCH_MID.get());

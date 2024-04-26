@@ -144,6 +144,15 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_TRIPLE_ARCH = registerBlock("lime_gypsum_plaster_triple_arch",
+                        () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS)));
+
+        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_TRIPLE_ARCH_CENTER = registerBlock(
+                        "lime_gypsum_plaster_triple_arch_center",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> SANDSTONE_FIVE_ARCH_CENTER = registerBlock(
                         "sandstone_five_arch_center",
                         () -> new ModDirectionalBlock(

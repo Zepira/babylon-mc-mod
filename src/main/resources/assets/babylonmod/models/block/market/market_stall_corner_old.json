@@ -6,7 +6,7 @@
   "textures": {
     "0": "babylonmod:block/market_side",
     "1": "babylonmod:block/market_top",
-    "2": "minecraft:block/acacia_fence",
+    "2": "minecraft:block/birch_fence",
     "particle": "babylonmod:block/market_side"
   },
   "elements": [
