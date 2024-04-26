@@ -263,6 +263,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMALL_WHITE_RUG.get());
                         output.accept(ModBlocks.SMALL_TAN_RUG.get());
                         output.accept(ModBlocks.SMALL_RED_RUG.get());
+                        output.accept(ModBlocks.WHEAT_SACK.get());
+                        output.accept(ModBlocks.BARLEY_SACK.get());
 
                     }).build());
 

@@ -734,6 +734,16 @@ public class ModBlocks {
                         () -> new ModRugBlock(
                                         BlockBehaviour.Properties.copy(Blocks.RED_WOOL).noOcclusion()));
 
+        public static final RegistryObject<Block> WHEAT_SACK = registerBlock(
+                        "wheat_sack",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
+        public static final RegistryObject<Block> BARLEY_SACK = registerBlock(
+                        "barley_sack",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion()));
+
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
                 registerBlockItem(name, toReturn);
