@@ -762,8 +762,28 @@ public class ModBlocks {
                         "tall_vase",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+        public static final RegistryObject<Block> BARREL_PLANTER_SMALL = registerBlock(
+                        "barrel_planter_small",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> BARREL_PLANTER = registerBlock(
+                        "barrel_planter",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
         public static final RegistryObject<Block> CYPRESS = registerBlock("cypress",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
+
+        public static final RegistryObject<Block> CYPRESS_LARGE = registerBlock("cypress_large",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
+
+        public static final RegistryObject<Block> CYPRES_SMALL = registerBlock("cypress_small",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
+
+        public static final RegistryObject<Block> CYPRESS_POT_SMALL = registerBlock("cypress_pot_small",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CYPRESS_POT = registerBlock("cypress_pot",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

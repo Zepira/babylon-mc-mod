@@ -165,7 +165,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CYAN_LEFT.get());
                         output.accept(ModBlocks.CYAN_RIGHT.get());
 
+                        output.accept(ModBlocks.CYPRESS_POT.get());
+                        output.accept(ModBlocks.CYPRESS_POT_SMALL.get());
+                        output.accept(ModBlocks.CYPRES_SMALL.get());
                         output.accept(ModBlocks.CYPRESS.get());
+                        output.accept(ModBlocks.CYPRESS_LARGE.get());
 
                     }).build());
 
@@ -271,6 +275,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BARLEY_SACK.get());
                         output.accept(ModBlocks.WIDE_VASE.get());
                         output.accept(ModBlocks.TALL_VASE.get());
+                        output.accept(ModBlocks.BARREL_PLANTER_SMALL.get());
+                        output.accept(ModBlocks.BARREL_PLANTER.get());
 
                     }).build());
 
