@@ -144,7 +144,8 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
-        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_TRIPLE_ARCH = registerBlock("lime_gypsum_plaster_triple_arch",
+        public static final RegistryObject<Block> LIME_GYPSUM_PLASTER_TRIPLE_ARCH = registerBlock(
+                        "lime_gypsum_plaster_triple_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS)));
 
@@ -760,6 +761,9 @@ public class ModBlocks {
         public static final RegistryObject<Block> TALL_VASE = registerBlock(
                         "tall_vase",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CYPRESS = registerBlock("cypress",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.FERN)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
