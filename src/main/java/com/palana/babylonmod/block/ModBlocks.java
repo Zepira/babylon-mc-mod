@@ -218,22 +218,22 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> LAPIS_TRIPLE_ARCH = registerBlock("lapis_triple_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE_STAIRS.defaultBlockState(),
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_STAIRS).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> LAPIS_TRIPLE_ARCH_CENTER = registerBlock(
                         "lapis_triple_arch_center",
                         () -> new ModDirectionalBlock(
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_SLAB).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> NARROW_LAPIS_SINGLE_ARCH = registerBlock(
                         "narrow_lapis_single_arch",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> NARROW_LAPIS_SINGLE_ARCH_TALL = registerBlock(
                         "narrow_lapis_single_arch_tall",
                         () -> new ModPassableStairBlock(() -> Blocks.SANDSTONE.defaultBlockState(),
-                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
+                                        BlockBehaviour.Properties.copy(Blocks.RED_NETHER_BRICKS).noOcclusion()));
 
         public static final RegistryObject<Block> SANDSTONE_PEAK_CORNER = registerBlock("sandstone_peak_corner",
                         () -> new ModDirectionalBlock(
