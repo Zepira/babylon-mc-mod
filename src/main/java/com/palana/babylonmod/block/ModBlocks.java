@@ -14,6 +14,7 @@ import com.palana.babylonmod.block.custom.ModProcessionalBlock;
 import com.palana.babylonmod.block.custom.ModRugBlock;
 import com.palana.babylonmod.block.custom.ModSaplingBlock;
 import com.palana.babylonmod.block.custom.ModScalableBlock;
+import com.palana.babylonmod.block.custom.ModWheatBlock;
 import com.palana.babylonmod.block.custom.types.SizeType;
 import com.palana.babylonmod.item.ModItems;
 import com.palana.babylonmod.worldgen.tree.PalmTreeGrower;
@@ -378,6 +379,20 @@ public class ModBlocks {
         public static final RegistryObject<Block> SANDSTONE_PEAK_DIAGONAL = registerBlock("sandstone_peak_diagonal",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_SINGLE_ARCH = registerBlock(
+                        "sandstone_diagonal_single_arch",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+
+        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_RECTANGLE_WINDOW = registerBlock(
+                        "sandstone_diagonal_rectangle_window",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
+        public static final RegistryObject<Block> SANDSTONE_DIAGONAL_ROUND_WINDOW = registerBlock(
+                        "sandstone_diagonal_single_window",
+                        () -> new ModDirectionalBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.SANDSTONE_WALL).noOcclusion()));
 
         public static final RegistryObject<Block> GRASS_TWO = registerBlock("grass_two",
                         () -> new ModGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
@@ -801,6 +816,10 @@ public class ModBlocks {
 
         public static final RegistryObject<Block> CYPRESS_POT = registerBlock("cypress_pot",
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> BABYLON_WHEAT_CROP = registerBlock("babylon_wheat_crop",
+                        () -> new ModWheatBlock(
+                                        BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -63,6 +63,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SANDSTONE_STEPPED_BLOCK_BOTTOM_DIAGONAL_SHADOWED.get());
                         output.accept(ModBlocks.SANDSTONE_EXTENDED_BLOCK_DIAGONAL.get());
                         output.accept(ModBlocks.SANDSTONE_PEAK_DIAGONAL.get());
+                        output.accept(ModBlocks.SANDSTONE_DIAGONAL_SINGLE_ARCH.get());
+                        output.accept(ModBlocks.SANDSTONE_DIAGONAL_RECTANGLE_WINDOW.get());
+                        output.accept(ModBlocks.SANDSTONE_DIAGONAL_ROUND_WINDOW.get());
                         output.accept(ModBlocks.EXTENDED_CORNER.get());
 
                         output.accept(ModBlocks.SANDSTONE_ROUND_WINDOW.get());
@@ -281,6 +284,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TALL_VASE.get());
                         output.accept(ModBlocks.BARREL_PLANTER_SMALL.get());
                         output.accept(ModBlocks.BARREL_PLANTER.get());
+                        output.accept(ModItems.BABYLON_WHEAT_SEEDS.get());
 
                     }).build());
 
