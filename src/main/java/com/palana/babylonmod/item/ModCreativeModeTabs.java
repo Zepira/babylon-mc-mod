@@ -115,6 +115,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.GRASS_TWO.get());
                         output.accept(ModBlocks.SANDY_STONES.get());
+                        output.accept(ModBlocks.MUD.get());
+                        output.accept(ModBlocks.MUD_ONE.get());
+                        output.accept(ModBlocks.MUD_TWO.get());
+                        output.accept(ModBlocks.MUD_THREE.get());
                         output.accept(ModBlocks.LIME_GYPSUM_PLASTER.get());
                         output.accept(ModBlocks.LIME_GYPSUM_PLASTER_DARK.get());
                         output.accept(ModBlocks.LIME_GYPSUM_PLASTER_BOTTOM_FADE.get());

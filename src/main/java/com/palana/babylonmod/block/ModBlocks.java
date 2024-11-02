@@ -386,6 +386,23 @@ public class ModBlocks {
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SAND).noOcclusion()));
 
+        public static final RegistryObject<Block> MUD = registerBlock("mud",
+                                        () -> new Block(
+                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+
+        public static final RegistryObject<Block> MUD_ONE = registerBlock("mud_one",
+                                        () -> new Block(
+                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+
+        public static final RegistryObject<Block> MUD_TWO = registerBlock("mud_two",
+                                        () -> new Block(
+                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+
+        public static final RegistryObject<Block> MUD_THREE = registerBlock("mud_three",
+                                        () -> new Block(
+                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+                
+
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER = registerBlock("lime_gypsum_plaster",
                         () -> new ModDirectionalBlock(
                                         BlockBehaviour.Properties.copy(Blocks.SANDSTONE).noOcclusion()));
