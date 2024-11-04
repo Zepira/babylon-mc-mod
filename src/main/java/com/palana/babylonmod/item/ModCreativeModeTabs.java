@@ -285,6 +285,22 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BARREL_PLANTER_SMALL.get());
                         output.accept(ModBlocks.BARREL_PLANTER.get());
                         output.accept(ModItems.BABYLON_WHEAT_SEEDS.get());
+                        output.accept(ModBlocks.CRATE_1.get());
+                        output.accept(ModBlocks.CRATE_1_ANGLED.get());
+                        output.accept(ModBlocks.CRATE_1_OFFSET.get());
+                        output.accept(ModBlocks.CRATE_1_SMALL.get());
+                        output.accept(ModBlocks.CRATE_1_SMALL_ANGLED.get());
+                        output.accept(ModBlocks.CRATE_1_SMALL_OFFSET.get());
+                        output.accept(ModBlocks.CRATE_1_SMALL_GROUP.get());
+                        output.accept(ModBlocks.CRATE_2.get());
+                        output.accept(ModBlocks.CRATE_2_ANGLED.get());
+                        output.accept(ModBlocks.CRATE_2_OFFSET.get());
+                        output.accept(ModBlocks.CRATE_2_SMALL.get());
+                        output.accept(ModBlocks.CRATE_2_SMALL_ANGLED.get());
+                        output.accept(ModBlocks.CRATE_2_SMALL_OFFSET.get());
+                        output.accept(ModBlocks.SQUARE_BARREL.get());
+                        output.accept(ModBlocks.SQUARE_BARREL_ANGLED.get());
+                        output.accept(ModBlocks.SQUARE_BARREL_OFFSET.get());
 
                     }).build());
 

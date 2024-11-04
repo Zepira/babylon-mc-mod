@@ -402,21 +402,20 @@ public class ModBlocks {
                                         BlockBehaviour.Properties.copy(Blocks.SAND).noOcclusion()));
 
         public static final RegistryObject<Block> MUD = registerBlock("mud",
-                                        () -> new Block(
-                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+                        () -> new Block(
+                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
 
         public static final RegistryObject<Block> MUD_ONE = registerBlock("mud_one",
-                                        () -> new Block(
-                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+                        () -> new Block(
+                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
 
         public static final RegistryObject<Block> MUD_TWO = registerBlock("mud_two",
-                                        () -> new Block(
-                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
+                        () -> new Block(
+                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
 
         public static final RegistryObject<Block> MUD_THREE = registerBlock("mud_three",
-                                        () -> new Block(
-                                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
-                
+                        () -> new Block(
+                                        BlockBehaviour.Properties.copy(Blocks.SAND)));
 
         public static final RegistryObject<Block> LIME_GYPSUM_PLASTER = registerBlock("lime_gypsum_plaster",
                         () -> new ModDirectionalBlock(
@@ -820,6 +819,67 @@ public class ModBlocks {
         public static final RegistryObject<Block> BABYLON_WHEAT_CROP = registerBlock("babylon_wheat_crop",
                         () -> new ModWheatBlock(
                                         BlockBehaviour.Properties.copy(Blocks.WHEAT).noCollission().noOcclusion()));
+
+        public static final RegistryObject<Block> CRATE_1 = registerBlock(
+                        "crate_1",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+        public static final RegistryObject<Block> CRATE_1_ANGLED = registerBlock(
+                        "crate_1_angled",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+        public static final RegistryObject<Block> CRATE_1_OFFSET = registerBlock(
+                        "crate_1_offset",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+        public static final RegistryObject<Block> CRATE_1_SMALL = registerBlock(
+                        "crate_1_small",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_1_SMALL_ANGLED = registerBlock(
+                        "crate_1_small_angled",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_1_SMALL_OFFSET = registerBlock(
+                        "crate_1_small_offset",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_1_SMALL_GROUP = registerBlock(
+                        "crate_1_small_group",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_2 = registerBlock(
+                        "crate_2",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_2_OFFSET = registerBlock(
+                        "crate_2_offset",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_2_ANGLED = registerBlock(
+                        "crate_2_angled",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_2_SMALL = registerBlock(
+                        "crate_2_small",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_2_SMALL_ANGLED = registerBlock(
+                        "crate_2_small_angled",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> CRATE_2_SMALL_OFFSET = registerBlock(
+                        "crate_2_small_offset",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SQUARE_BARREL = registerBlock(
+                        "square_barrel",
+                        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SQUARE_BARREL_ANGLED = registerBlock(
+                        "square_barrel_angled",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+        public static final RegistryObject<Block> SQUARE_BARREL_OFFSET = registerBlock(
+                        "square_barrel_offset",
+                        () -> new ModDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
